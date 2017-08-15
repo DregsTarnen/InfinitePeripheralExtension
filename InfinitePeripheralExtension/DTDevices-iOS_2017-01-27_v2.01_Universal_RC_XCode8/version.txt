@@ -1,0 +1,1195 @@
+SDK CHANGELOG
+
+2.01
+[UniversalSDK, AudioReaderSDK] Added support for EMV without RSA encryption, tags are encrypted with DUKPT/3DES instead, supported on audio reader firmware version 7.0+
+[UniversalSDK] Fixed inability to detect bluetooth device disconnection
+[UniversalSDK] Added support for iHUB (main functions to configure/detect and automatic connection to pinpads and printers)
+[UniversalSDK] Fixed page mode printing was skipping blank lines at the start of the label
+[AudioReaderSDK] Reworked internal mechanics for receiving data, no more packets will be failing/retried because of packet data gets too big
+[UniversalSDK] Added function to control the status line on pinpads
+[UniversalSDK,PinpadSDK] Version is returned as full 4 groups
+[UniversalSDK,PinpadSDK] Added command to show init screen
+[UniversalSDK] Added commands to get/set internal device clock
+[UniversalSDK] Fixed synchronous pin function erroring out
+[UniversalSDK] Fixed unique ID not being accepted when doing emv2 contactless transaction and getting card data encrypted with PPAD_DUKPT or PPAD_3DES
+[UniversalSDK] Changed so tags added on emv2StartTransactionOnInterface takes precedence over internal tags like amount, transaction type, etc
+[UniversalSDK] Fixed sometimes pinpads were unable to connect via bluetooth
+[UniversalSDK,PinpadSDK] Added a command to set how the settings button operates on pinpads
+[UniversalSDK] Fixed changing pinpad keyid has no effect on idtech/magtek algorithms
+[UniversalSDK] Fixed iHub communication problems with big packets of data
+[UniversalSDK] Extended iHub to be able to talk to generic devices via iHubDevice class and notifications
+[UniversalSDK] Added support for HID barcode connected to iHub
+[UniversalSDK] Added 3DES CBC MAC function to pinpads
+[UniversalSDK] Extended error code list and description
+[UniversalSDK, PinpadSDK] Implemented command caching, resulting in drastic reduction (up to 3 times) in communcation speed with the pinpads over bluetooth
+[UniversalSDK, LineaSDK] Added support for linea with payment engine, smartcard and contactless and pinpad-based key loading
+[UniversalSDK] Improved support for swift language by changing function return type, updating enums and adding some new functions as alternative (namely rf card write) that better cope with swift
+[Swift Demo] Massive update adding all basic functionality - rf cards, emv engine
+[UniversalSDK, PrinterSDK] Changed time measurement in the printer thread to avoid rare exception
+[UniversalSDK] Added support fo iHUB firmware update
+
+
+1.99
+[UniversalSDK] Added ability to get certificates info
+[UniversalSDK, AudioReaderSDK] Fixed communication issues with MRD-10 on iPhone 6S/6S Plus
+[UniversalSDK, PinpadSDK] Added function to control leds on the pinpad, requires 2.4.37.0 application or higher
+
+1.98
+[UniversalSDK] Added detection of e-passport nfc cards
+[UniversalSDK] Added support for smartcard on DPP-250/350 printers
+[AudioReaderSDK] Added support for serviceCode whenever supported by audio reader firmware
+[UniversalSDK, PrinterSDK, LineaSDK, PinpadSDK] Fixed issues with some of the enums in the header files
+[UniversalSDK, PrinterSDK, LineaSDK, PinpadSDK] Documentation fixes and cleanup
+[PrinterSDK, LineaSDK] Removed exception based code
+[UniversalSDK, LineaSDK] Implemented firmware update for Newland barcode engines, requires firmware 5.59+
+[Linea Firmware] Updated to 5.59, see below for changes
+[UniversalSDK, LineaSDK] Added command to read autooff settings
+[UniversalSDK, LineaSDK] Implemented workaround for problematic ISO15693 cards with issues writing, requires firmware 5.60 to work
+[UniversalSDK] Fixed duplicate symbol linker errors when building with all_load flag
+[UniversalSDK, PrinterSDK] Direct write printer command in non-protocol mode now sends the data in chunks to fix issue with large data
+[UniversalSDK, PinpadSDK] Fixed getting PIN data in format 0 after reading magnetic card
+[UniversalSDK] Added recreation of track1 masked data on pinpads (for cardholder name purpose)
+[UniversalSDK, LineaSDK] Fixed getting encrypted head DUKPT serial function
+[UniversalSDK, LineaSDK] Fixed bluetooth discover error out right after you manually disconnect a bluetooth device
+[UniversalSDK, PrinterSDK] Added support for SM3-21E printer
+[UniversalSDK, LineaSDK] Extended masked parameters allowing to disable sending of track 3
+[UniversalSDK, LineaSDK] Fixed Ultralight-C authentication for PN544 module
+[UniversalSDK] Added support form universal Contact/Contactless/Magnetic EMV2 payment engine
+[UniversalSDK, PrinterSDK] Added support for automatic coordinate calculation for page mode rotated print origin
+[UniversalSDK] Added support for FirstData TransArmor card format for Lineas and Pinpads, requires firmware 5.60.02 or higher for linea or 2.04.34 or higher for pinpads
+[UniversalSDK, PrinterSDK, LineaSDK, PinpadSDK] Fixed reading of JIS2 cards
+[UniversalSDK, LineaSDK] BT301 bluetooth module optimizations
+[UniversalSDK] Added progress notification on pinpad firmware update
+[UniversalSDK, LineaSDK, PinpadSDK] Fixed writing multiple blocks on Mifare Classic cards
+[UniversalSDK] Added BTLE support for esc/pos printers
+[UniversalSDK] The library is now split to several builds: basic (libdtdev.a) having no BTLE, nor audio; BTLE (libdtdev_btle.a); audio (libdtdev_audio.a) containing auidioreder code but no BTLE
+[UniversalSDK] Every library file has a corresponding bitcode version with _bitcode suffix, example libdtdev_bitcode.a
+[AudioReaderSDK] Tweaked connection on iPhone 6S/6S+
+[UniversalSDK, LineaSDK] Prevented setting both kiosk mode and pass-through sync at the same time, as it renders the unit useless
+[UniversalSDK] Fixed garbage data coming after magnetic card swipe sometimes on pinpads
+[UniversalSDK, PrinterSDK, LineaSDK, PinpadSDK] Fixed compile warnings when using modules in applications
+
+
+1.97
+[UniversalSDK, LineaSDK] Added command to power off the device
+[UniversalSDK, LineaSDK, PinpadSDK] Reorganized cryptographical functions as static so they don't conflict with other externally defined
+[UniversalSDK, PinpadSDK] Added ability to display euro and pound symbols on pinpads
+[UniversalSDK, LineaSDK, PrinterSDK] Supports sending non-financial cards (loyalty, driver's license, etc) as plain
+[UniversalSDK] Added felica transieve command
+[UniversalSDK, LineaSDK] Added option to send custom command to Intermec barcode engine
+[UniversalSDK, PrinterSDK] Added ability to control the HRI font for barcodes, small fixes on page mode support
+[UniversalSDK, PrinterSDK] Added commands to temporary feed the paper and retract it (tear out labels)
+[UniversalSDK, LineaSDK, PrinterSDK, PinpadSDK] Fixed multi-scan without duplicates scanner mode was preventing scanning barcodes again after reinit of the scan process
+[UniversalSDK, PrinterSDK] Fixed command for relative moving the cursor in page mode
+[Linea Firmware] Updated to 5.58, see below for changes
+[UniversalSDK, LineaSDK] Fixed return value of getScanMode function
+
+1.96
+[UniversalSDK, LineaSDK] Added support for Mifare Plus cards
+[Fiscal SDK] Added subtotal with absolute sum support on FMP-10 romanian printers
+[UniversalSDK] Partial support for several desfire functions
+[UniversalSDK, PrinterSDK] Fixed incorrect printtext behavior with $/%/&/# characters
+[UniversalSDK, LineaSDK] Further instability changes to the RF communication with PN544 module
+[UniversalSDK, PinpadSDK] Added automatic synchronization on the device clock upon connect
+[UniversalSDK] Added support for fully async pin entry using the same functions. The difference now is that you can cancel the pin entry at any time
+[UniversalSDK, LineaSDK] Added support for desfire cards and direct ISO 14443 transceive for PN544 devices (RF in model name)
+[UniversalSDK] Added masked card data with AES256/encrypted head
+
+1.95
+[UniversalSDK] Added emsrSetCardDataMode to select which tracks you want returned on pinpads and printers, currently not working on lineas
+[Fiscal Demo] Added destroying EA connection upon entering background and recreating new on foreground
+[UniversalSDK, LineaSDK] Fixed instability in RF communication created by 1.94
+[UniversalSDK, PinpadSDK] Added support for SM3-21 printer
+
+1.94
+[UniversalSDK, LineaSDK] GetBatteryInfo now returns basic battery info on older firmwares
+[UniversalSDK, LineaSDK] Added support for Linea Pro 6
+[UniversalSDK, LineaSDK] Added SAM module support
+[UniversalSDK, LineaSDK] Added functions for direct communication to ISO1443-A/B contactless cards
+[UniversalSDK, LineaSDK] Added support for Motorola barcode engine (incomplete)
+[UniversalSDK, PinpadSDK] Added support for MS card reading on DPP-350 printers
+[UniversalSDK, LineaSDK] Changed the code to support the new InfineaX model with changed bluetooth module
+[UniversalSDK] Added function to mask/unmask magnetic card service code (works only on lineas, with head firmware 2.32+)
+[AudioSDK] Communication stability changes for iPhone 6
+[UniversalSDK] Added support for European EMV contactless kernel in pinpads
+[UniversalSDK, PrinterSDK] Added support for EP-210 printer
+[UniversalSDK, LineaSDK] Added functions to control the external speaker of InfineaX - automatic mode and enable/disable of the hardware button (Firmware 5.56 and higher)
+[UniversalSDK, LineaSDK] Changed handling of the hardware buttons in according to the changes in 5.56 and up firmware
+[Linea Firmware] Updated to 5.56, see below for changes
+[UniversalSDK] Fixed an issue when a printer is connected via TCP, then the subsequent bluetooth connection is impossible
+[UniversalSDK] Fixed TCP connection was staying open after program was minimized resulting in invalid connection
+[UniversalSDK, LineaSDK] Fixed duplicate symbols when running on simulator
+[UniversalSDK, LineaSDK, PrinterSDK, PinpadSDK] Changed EA communication handling resulting in smaller battery impact on the iOS device
+
+
+1.93
+[UniversalSDK] Merged with AudioReaderSDK, allowing easily using audio reader devices with the ones currently supported by the universal
+[UniversalSDK] Added key support for the pinpads, based on newest pinpad firmware (currently key down generates both down and up events)
+[UniversalSDK] Changed MODE_MULTI_SCAN for pinpads to be be MODE_MULTI_SCAN_NO_DUPLICATES, as the first mode is not working correctly on number of engines
+[UniversalSDK] Added a command to delete pinpad keys, updated key loading samples
+[UniversalSDK] Kiosk mode command checks for attached cable now, disallows when the cable is not plugged in
+[Linea Firmware] Updated to 5.54, see below for changes
+[Linea Firmware] Updated to 3.15, see below for changes
+[UniversalSDK, LineaSDK] Fixed error in RF module code on units with "RF" in the model name, that was causing crashes and instability
+
+1.92
+[LineaSDK,UniversalSDK] Added support for 5.52 InfineaX firmware regarding bluetooth changes
+[Linea Firmware] Updated to 5.52, see below for changes
+[PrinterSDK,UniversalSDK] Added support for EP-2000 and EP-700 printers
+[PrinterSDK,UniversalSDK] Added specific commands for PDF-417 barcode printing with various settings and QRCode printing
+[UniversalSDK] Added getConnectedDeviceInfo and getConnectedDevicesInfo to get information about currently connected devices to the universal sdk
+[UniversalSDK] Added ability to get pin block using master/session key exchange
+[UniversalSDK, PrinterSDK, LineaSDK, PinpadSDK] Added connection type property
+[UniversalSDK, LineaSDK] Added command to save Linea settings to the flash, in case the automatic saving is not fast enough
+[UniversalSDK, LineaSDK] Enabling kiosk mode automatically enables 2.4A usb charging
+[UniversalSDK, PrinterSDK, LineaSDK, PinpadSDK] Improved communication speed: up to 3 times in lightning connector lineas, modest increase in accessory printers and almost no increase in bluetooth printers and pinpads
+[Readme] Updated readme file including the iOS 7.1.2 issue and the way to avoid it
+
+1.91
+[LineaSDK,UniversalSDK] Removed the need of a CoreBluetooth framework to be linked (although, it may show up as future release when BTLE code is complete)
+[Linea Firmware] Updated to 5.51, see below for changes
+
+1.90
+[UniversalSDK] emvGetTagsEncryptedDUKPT can reuse the last dukpt data key if key ID is 0xFF
+[Universal Demo] Completely reworked the netcomplus emv kernel pinpad demo to show for real world emv transaction (works with visa cards)
+[LineaSDK,UniversalSDK] Added commands for kiosk mode, device working only on external power and allowing charging up to 2.4A
+[LineaSDK,UniversalSDK] Extended charging commands for up to 2.4A
+[UniversalSDK] Added native support for DPP-450 in ZPL mode, both with direct connection and via Linea's bluetooth
+[LineaSDK,UniversalSDK,PrinterSDK] Fixed regression in 1.89 about unable to select encryption on encrypted firmware version less than 2.30
+[Linea Firmware] Updated to 5.50, see below for changes
+
+1.89
+[FiscalSDK] Fixed command87Variant0Version0
+[FiscalSDK] Added status bytes to be returned
+[UniversalSDK,PrinterSDK] Fixed communication issues with DPP-250 with encrypted head
+[Linea Firmware] Updated to 5.45, see below for changes
+[UniversalSDK, PrinterSDK, LineaSDK] Communication stability fixes in case of many connect/disconnects
+[UniversalSDK] Fixed IDTECH protocol to return masked track 1 data having %* instead of %B
+[UniversalSDK,LineaSDK] Fixed reading/writing on ISO15693 cards in big chunks
+[UniversalSDK,LineaSDK] Added a way to query for local bluetooth address/mac
+[UniversalSDK,LineaSDK] Added transcieve command for ISO14 cards
+[Universal Demo] Added sample for TR31 pinpad key exchange and extended the info to return DUKPT keys too
+[UniversalSDK,LineaSDK] Added functions to get extended battery info (Infinea), which also work with other devices too by emulating the result and setting the battery max capacity
+
+1.88
+[UniversalSDK, PrinterSDK, LineaSDK] Communication stability improvements when using combination of devices
+[Universal Demo, LineaDemo] Updated EMV configuration to v5, improving emv cards supported (AmEx)
+[FiscalSDK] Fixed leftover data when communication is interrupted
+[FiscalSDK] More descriptive error messages about communication issues
+[FiscalSDK] Added customCommand
+[UniversalSDK, PrinterSDK] Added support for EP-300 printer
+[UniversalSDK, LineaSDK] Fixed an error making errors in communication with 30 pin connector lineas if another accessory is connected during the existing session
+[UniversalSDK, LineaSDK] Fixed JIS2 cards missing last track data symbol
+
+1.87 BETA
+[UniversalSDK, PrinterSDK] Fixed page mode support for DPP-450, added function to set the current cursor position in page mode
+[UniversalSDK, PrinterSDK] Added codepage support for printers
+[UniversalSDK] Added ability to query the time left for the device to shutdown (Linea)
+
+1.86
+[UniversalSDK, LineaSDK] Added support for DPP-250C printing via Linea's bluetooth
+
+1.85
+[UniversalSDK, PrinterSDK] Fixed issue with bluetooth connection to the printers fail, if the first one fails (via Linea).
+[UniversalSDK, PrinterSDK] Added support for EMSR in printers
+[UniversalSDK, PrinterSDK] Tweaked battery management code for all printers beside DPP-450
+[UniversalSDK] Fixed firmware version of the emulated encrypted head (found in NFC readers)
+[UniversalSDK, LineaSDK] Added support for DUKPT with AES128
+[LineaSDK] Allowed configuring EMV masked card data
+[UniversalSDK, PrinterSDK] Fixed blackmark support for DPP-450
+[Linea Firmware] Updated to 5.38, see below for changes
+[UniversalSDK] Added functions to encrypt or decrypt data using keys loaded on the pinpad
+[Universal Demo] Added pinpad specific view to query keys, more pinpad related demo code will be put inside it
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] arm64 linked to the fat binary
+
+1.84
+[UniversalSDK] Fixed issue with EMV getting big track data (IDTECH)
+[Universal Demo] Always setting active head in EMSR controller to match the setting
+
+1.83
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] More tweaks to the communication in border cases (getting interrupted by switching programs for example)
+[UniversalSDK,LineaSDK] Added EMV L2 Contactless Kernel functions (NFC)
+[UniversalSDK,LineaSDK,PinpadSDK] Ability to discover and connect via on-device bluetooth to printers using the new bluetooth module (the one that is able to directly connet with iOS)
+[UniversalSDK,PinpadSDK] Fixed SDK responding with empty magnetic card notification upon failed card read
+[UniversalSDK,PinpadSDK] Added ability to query pinpad DUKPT KSN
+[UniversalSDK] Added support for pinpad DUKPT magnetic card format
+[Linea Firmware] Updated to 5.35, see below for changes
+[UniversalSDK] Reworked Voltage support, functions, documentation and example, according to the final firmware
+[Universal Demo] Added support for 3DES magnetic card encryption
+[UniversalSDK,LineaSDK] Changed HID communication to match 5.36 firmware, it will render it incompatible with the old firmwares!
+[UniversalSDK] Added ability to get masked data from pinpad only algorithms - dukpt and 3des
+[UniversalSDK] Added additional parameter to emsrConfigMaskedData to control the unmasked digits after the PAN
+
+1.82
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Rewritten communication, now allows for using more than one device at the same time, e.g. Linea via cradle connection and BluPad via bluetooth
+[UniversalSDK] Added functions to get/release keyboard control and read keys on the pinpads
+[UniversalSDK] Fixed emvGetCommonAppList when there are multiple applications on the card
+[UniversalSDK] Added EMV init and deinit functions
+[UniversalSDK] Fixed multiple notifications for inserting smartcard on the pinpad
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Added workaround for communication issues found on iOS6 and 7, resulting in more stable connection
+[Linea Firmware] Updated to 3.11, see below for changes
+
+
+1.81
+[UniversalSDK] Added key exchange command for pinpads
+[UniversalSDK,LineaSDK] Calling barcode engine reset it also enables all barcodes by default on Opticon barcode
+[UniversalSDK,PrinterSDK] Fixed battery capacity calculation for DPP-450
+[UniversalSDK] Fixed WiFi connection to DPP-450
+
+
+1.80
+[UniversalSDK] Fixed regression of 1.79 - barcode scanning on PPad1 is too slow
+[UniversalSDK,LineaSDK] Added support for Magtek encryption
+[UniversalSDK,LineaSDK] Added support for selecting key index for emsr cryptography and the additional keys offered: 3xAES128, 3xAES256, 3xDUKPT (EMSR ver 2.30+)
+[LibraryDemo] Added demo code to handle Magtek encryption and to connecto to Mercury servers (using supplied by Mercury code)
+[LibraryDemo] Added handing of the additional keys the EMSR 2.30+ offers
+[LibraryDemo] Light visual touches to look better on iOS7
+[UniversalSDK,LineaSDK] Fixed bluetooth module stayed on for longer than needed when the remote device initiated disconnect on lightning connector lineas with firmware < 5.25
+[UniversalSDK,LineaSDK] Fixed internal parsing of firmware version with single digit minor version, i.e. 3.02, bug resulted in weird behavior at places, like unable to get Code engine firmware version
+[UniversalSDK] Added support for key index alongside encryption in EMSR 2.30+ firmware versions
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Removed ARM64 build and the support is back to iOS 5.0+ due to last minute change by Apple. According to changelog:
+"Next month we will be making changes so that you can create a single app binary that supports 32-bit on iOS 6, as well as 32-bit and 64-bit on iOS 7."
+64 bit support will be back when this change is live.
+
+1.79 GM
+[UniversalSDK,LineaSDK] Fixed regression of 1.78 - barcode type is not returned unless you set to extended barcode type mode
+[UniversalSDK,LineaSDK,PinpadSDK] Bluetooth: code completely rewritten
+[UniversalSDK,LineaSDK,PinpadSDK] Bluetooth: graceful disconnect whenever possible, disconnect takes more time now, but the remote device properly shuts down the connection
+[UniversalSDK,LineaSDK,PinpadSDK] Bluetooth: added ability to work in "server" mode, where remote devices connect
+[UniversalSDK,LineaSDK,PinpadSDK] Bluetooth: Added notifications for device connect and disconnect
+[UniversalSDK,PrinterSDK] Added support for SM1-22 printer
+[LibraryDemo] Changed the dukpt sample code to not zero out the counter of the ksn when generating ipek, because that kills the tgate demo code
+[UniversalSDK,LineaSDK] Workarounded inability to set scan mode without duplicates on firmware versions > 2.91
+[UniversalSDK,LineaSDK] Bluetooth: No longer fills the error parameter after successful connect
+[UniversalSDK] PP-60 simulated start and stop scan from the command
+[PPadDemo] Updated to work with BluPad-50
+[UniversalSDK] Partial emulation of the crypto functions to work with the encrypted head
+[UniversalSDK,LineaSDK] Fixed opticon barcode updating firmware on newer firmwares
+[UniversalSDK] Updated Linea Medical support
+[UniversalSDK] Added external speaker management
+[UniversalSDK,LineaSDK] Added functions to deal with ISO14B RF cards and send/receive APDUs
+[UniversalSDK,LineaSDK] (temp) Added support for NFC PayPass cards
+[UniversalSDK,PrinterSDK] Fixed printing errors when too many 'words' are there with DPP-450 printer
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Performance: reduced cpu usage by 0.1% (double) both when idle and connected
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Stability: changed the way communication is handled and streamlined various situations, should result in better stability and better handling of unusual situations
+[UniversalSDK] Provided better commands to query the encrypted head for generic info and keys, updated samples
+[UniversalSDK] Added support for changing the carge current (lightning connector lineas only) from 500mA to 1A
+[UniversalSDK] Added support for enabling or disabling pass-through mode (sync) when usb cable is connected (lightning connector lineas only)
+[UniversalSDK,LineaSDK] Fixed wrong return type for EAN13 for Newland scanners
+[UniversalSDK,LibraryDemo] Added support for Voltage encryption
+[UniversalSDK,LineaSDK] Added function to control autooff timeout (firmware 5.21)
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Implemented workaround for iOS7.0 issue (see readme)
+[UniversalSDK,LineaSDK,PinpadSDK] Fixed GS1-128/EAN-128 being returned as CODE-128 on Newland engine
+[UniversalSDK,LineaSDK,PinpadSDK] Fixed not reading correctly key version on newer encrypted head firmware
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Dropeed support for ARMv6 devices: iPhone 2G/3G, iPod 1G/2G (contact me if you want a build with it)
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Dropeed support for iOS5, only 6 and above are supported  (contact me if you want a build with it)
+[UniversalSDK,LineaSDK,PinpadSDK,iSerialSDK] Added support for ARM64/ARMv8 devices: iPhone 5s
+[UniversalSDK] Added support HID iClass contactless cards
+[UniversalSDK,LineaSDK] RF remove card detection changed: it is much slower now, but uses much less power during that time, future firmware update will make this faster again by retaining the better power consumption
+
+
+1.78
+[UniversalSDK,LineaSDK] Rewrite of the RF functions, PN544 module functional again, code is going module based for use with different RF modules with minimal overlap
+[UniversalSDK,LineaSDK] Adding support for new RF module - RC663
+[UniversalSDK,LineaSDK] Added new barcode notification barcodeNSData, with the ability to receive raw data from the barcode, instead of a string
+[UniversalSDK,LineaSDK,PrinterSDK] Added support for DPP-350C/BLM-80C printers
+[UniversalSDK] Fixed incorrect connection state reported as CONN_CONNECTING upon calling disconnect
+
+1.77
+[UniversalSDK,LineaSDK] Support for Linea5
+[UniversalSDK,LineaSDK,PrinterSDK,PinpadSDK,iSerialSDK] Documentation generated as pdf files instead of html
+[UniversalSDK,LineaSDK,PrinterSDK,PinpadSDK,iSerialSDK] Fixed an issue when having 2 applications trying to access single device, one being background
+[UniversalSDK,LineaSDK,PrinterSDK,PinpadSDK,iSerialSDK] Added a function isPresnt to check for device presence without connecting
+[LibraryDemo, LineaDemo] Removed some redundant code
+[UniversalSDK,LineaSDK] Detection of large and micro PDF-417 barcodes on intermec scanners
+[UniversalSDK] Added command to manualy enter magnetic card data on supported pinpads
+[UniversalSDK] Fixed KSN was missing from the DUKPT PIN data
+[UniversalSDK,LineaSDK,PrinterSDK,PinpadSDK,iSerialSDK] Changed some internal function names so they don't conflict if a program uses similary named ones
+[UniversalSDK] Added support for LineaMedical
+[UniversalSDK] Added support for Vibration, including feature check
+[UniversalSDK] Added support for simple LED control, including feature check
+[Linea Firmware] Updated to 2.96, see below for changes
+
+1.76
+[UniversalSDK,PPadSDK] Disabling hardware scan button/barcode events now does not prevent the software barstart/stop to work, they are temporary enabled
+
+1.75
+[UniversalSDK,PPadSDK] Fixed regression from 1.72 making it unable to connect to some PPad1 devices
+[UniversalSDK,LineaSDK] Added more ISO 15693 card functions
+[UniversalSDK,LineaSDK] Added support for FeliCa cards
+[UniversalSDK,LineaSDK] Added support for FeliCa SmartTag ST1020
+[UniversalSDK,LineaSDK] Added new notification for encrypted magnetic card data, featuring masked card data for all encryption algorithms. Currently supported on Lineas with encrypted head firmware 2.14+
+
+1.74
+[UniversalSDK,PrinterSDK] Added support for CMP-10 bluetooth printer
+
+1.73
+[LineaDemo] Removed test leftover from 1.72, that was disabling the barcodes. If you have used that, LibraryDemo will enable them back
+[UniversalSDK,LineaSDK,PrinterSDK,PinpadSDK,iSerialSDK] Connection to the accessory will be retried in case it fails the first time. Happens if you switch fast 2 programs using the SDKs, the OS needs some time to free resources.
+
+1.72
+[UniversalSDK,LineaSDK] Added detection of UPC-A and EAN-13 barcodes with Code engine, will return correct types now
+[UniversalSDK,LineaSDK] Added external serial port functions for Linea Tab 2L model, supported in firmware 2.93 or higher
+
+1.71
+[UniversalSDK,iSerialSDK] Added ability to discover bluetooth devices even if there is a connection active, the current device is disconnected
+[UniversalSDK] Enabled all supported barcodes by default on opticon engine
+[UniversalSDK,PrinterSDK] Added support for DPP-250 and DPP-350 printers direclty connecting via bluetooth
+[UniversalSDK,PrinterSDK,PinpadSDK] Added support for customizing when the data notification will be sent on the bluetooth streams - you can have it timed and/or by data length and/or by sequence of bytes arrived
+[LineaSDK] Fixed some leftover function names (in the NSException part) after the change in names in 1.60
+[LineaSDK,UniversalSDK] Fixed barcode reading on Linea 1 BM model
+[Pinpad Demo] Reworked to use UniversalSDK and added to the package
+[UniversalSDK] Defined error codes returned from functions inside the NSError objects
+[Linea Firmware] Updated to 2.92, see below for changes
+[LineaSDK,UniversalSDK] Implemented workaround for the inability to write on some ISO15693 cards
+
+1.70
+[UniversalSDK,LineaSDK,PrinterSDK,iSerialSDK] Workarounded iOS6 issue, where internal iOS thread was crashing trying to release NSLock object currently in use, resulting in either program crash, or inability to connect again
+[UniversalSDK] Fixed bluetooth disconnect failed when used with iSerial
+[UniversalSDK] Added paperStatus delegate notification
+[UniversalSDK] Fixed incorrect barcode scanner feature being returned when no PP-60 printer was connected via bluetooth
+Added migrating from LineaSDK+PrinterSDK to the UniversalSDK in the readme.txt
+
+1.68
+[UniversalSDK,LineaSDK,PinpadSDK] Made bluetooth discovery more reliable, bluetooth devices, that failed to respond with name will no longer be included
+
+1.67
+[UniversalSDK,LineaSDK] Fixed btDiscoverDevicesInBackground was looking for supported devices only
+[UniversalSDK,LineaSDK] Fixed reading JIS magnetic cards on firmware version 2.43 and up
+[UniversalSDK] Added btDiscoverDevices sunchronous function, it is not recommended, use btDiscoverDevicesInBackground instead
+[UniversalSDK] Updated btDiscoverSupportedDevices to work properly on PPAD1 too
+
+1.66
+[UniversalSDK,PrinterSDK] Fixed printText memory corruption in case of manually printing a divider line
+[UniversalSDK,PrinterSDK] Lots of printText improvements and fixes especially with justified text
+[LineaSDK,PrinterSDK] LINEA_NO_EXCEPTIONS and PRINTER_NO_EXCEPTIONS defaults to enabled now, disabling the use of the old NSError based functions. Comment these defines to allow their use
+[Linea Firmware] Updated to 2.91, see below for changes
+
+1.65
+[UniversalSDK] Added function to set the card to raw mode and getting raw card data notification (works on Lineas without encrypted head only)
+[UniversalSDK] Added build date property, modified demo to show it
+[Library Demo] Removed padding option from AES operations so it now works with all encrypted packets
+
+1.64
+[iSerialSDK] Reborn as a separate module, still available as a part of the UniversalSDK
+[Linea Firmware] Updated to 2.88, see below for changes
+[UniversalSDK,PrinterSDK] Initial support for direct bluetooth printers (connected to the iOS device)
+[UniversalSDK] Initial support for wifi printing (currently DPP-450)
+[Library Demo] Tweaked a bit for iPhone 5, replaced battery label/image with button
+
+1.63
+[Library] Combiled with XCode 4.3.3, this will make it work fine on 4.3+
+[UniversalSDK,LineaSDK,PinpadSDK,PrinterSDK] Fixed high cpu usage when no device was connected (thanks HLW)
+[UniversalSDK,LineaSDK,PinpadSDK,PrinterSDK] Speed optimizations, lowered threads needed, improved stability when tortured
+
+1.62
+[UniversalSDK,LineaSDK] Temporary disabled bluetooth automatic detection, it was causing issues
+
+1.61
+[UniversalSDK] Fixed feature events being double sent
+[UniversalSDK,LineaSDK,PinpadSDK] Fixed remote bluetooth device disconnect handling
+
+1.60
+NEW!!! [UniversalSDK] Created universal sdk that provides same set of functions for every supported device - Linea, Pinpads, Printers. Check the included readme for detailed description and migration guide
+NEW!!! [Library Demo] Demo program (based on LineaDemo) that uses the UniversalSDK to work on all the supported devices
+[LineaSDK] Removed old mifare and ISO15 functions, the modules were experimental and replaced by a new one, created new functions and events to work with it
+[Linea Demo] Removed Mifare and ISO15 tabs and replaced with new RF tab demoing how to work with RF cards using the new functions
+[PinpadSDK] Added support and functions for the new firmware - setting barcode sound, initialization string, scan mode (single/multi)
+[Library] Removed AudioReaderSDK and everything based on it, made as a separate one, lowered the size of the library
+[LineaSDK,PrinterSDK] Lot of function renames to be the same style accross the board for the UniversalSDK, provided defines for backward compatibility
+[LineaSDK,UniversalSDK] Added function to control data masking when sending encrypted card data
+[LineaDemo,LibraryDemo] Added idtech encrypted magnetic card data decryption demo
+[PrinterSDK,PinpadSDK] Removed iSerial support
+[UniversalSDK] Added iSerial as supported device, it only exports bluetooth feature and provides ability to connect to supported bluetooth printers/pinpads
+[LineaSDK,PrinterSDK,PinpadSDK,UniversalSDK] Now compiled with ARC
+[LineaSDK,PinpadSDK,UniversalSDK] Added optional caching on bluetooth streams, read the supplied function doc to know when to use and when not
+[UniversalSDK] Added detection on bluetooth module being present in Linea, the feature will give the correct value
+
+1.53
+[Linea Firmware] Updated to 2.71 BETA, see below for changes
+[LineaSDK] Renamed barcodeEngineSet/GetInitString to barcodeOpticonSet/GetInitString, provided defines to ensure old code still works
+[LineaSDK] Added barcodeIntermecSet/GetInitData to allow customizing the Intermec engine
+[LineaSDK] Changed barcodeXSet/Get functions to detect barcode engine and ensure no bogus data goes to wrong engine
+[LineaSDK] Changed bluetooth functions to work with firmware 2.70 allowing bluetooth and barcode at the same time
+[LineaSDK] Bluetooth stream now notify of a disconnect via normal stream delegate
+[LineaSDK] Added support for dummy key in the encrypted head
+[LineaSDK] Cached result of getting barcode scan mode so it can be called repeatedly without actually wasting communication time
+[Linea Demo] Now no longer disables bluetooth after print, allowing for fast prints, wastes battery
+[PrinterSDK] Fixed bluetooth module to react better on disconnect, especially in discovery
+[Printer Demo] Updated to solve issues with bluetooth module not being initialized properly upon disconnection or left with bluetooth active
+[LineaSDK] Improved communication stability
+[PrinterSDK] Improved communication stability via bluetooth
+[LineaSDK] Intermec barcode engine now properly returns UPC-A barcodes
+[LineaSDK] Changed names of varous bluetooth functions to make them the same across different SDKs, provided defines to keep backward compatibility
+[PinpadSDK] Added support for MPED-400 pinpad
+[PinpadSDK] Added support for bluetooth connection to pinpad
+[Pinpad Demo] Modified to work with Linea too, when linea is detected it fires bluetooth discovery/connection dialog
+
+1.52
+[LineaSDK] Fixed reading barcodes on Linea 1 BM models
+
+1.51
+[PPadSDK] Fixed sending APDU commands to the smartcard
+[LineaSDK] Added support for Intermec barcode engine
+
+1.50
+[LineaSDK,PrinterSDK] Rewritten to not be using exceptions at the core, created NSError alternative to all the functions, the exception based functions are now obsolete, but will continue to function. All new functions will be using NSError. This change was needed due to ARC issues (see readme)
+[PrinterSDK] Replaced loadLogo function with one that accepts UIImage
+[PrinterSDK] Bluetooth support redesigned to be easier to work with
+[LineaSDK, PrinterSDK, iSerialSDK] Fixed bluetooth discovery ignoring the max number of devices parameter
+[Linea Firmware] Updated to 2.65, see below for changes
+[LineaSDK] Added support for Code CR8000 barcode engine
+[LineaSDK] Added partial support for ISO/IEC 15424 barcode types, currently work for Code engine, added new barcode data notification that is used with that mode enabled
+[LineaSDK] Added support for motion detect barcode scan mode. In that mode, the scanner stays half-active and fully activates if it detects moving target in front, useful for always on scanning devices like price checkers.
+[LineaSDK] Added support for scan on release barcode mode. In that mode the barcode is actually scanned on stopScan/button release, while startScan/button press is used to aim
+[LineaSDK] Added support for encrypted head ver 2.0, featuring DUKPT and IDTECH data format
+[AudioReaderSDK] Added support for audio reader with SmartCard
+[Linea Demo] Rewritten to use NSError based functions, no more exceptions
+[PrinterSDK] Changed default printText encoding to 1252, allowing to print euro and western europe characters
+[PrinterSDK] printText ignoring character encoding
+[PrinterSDK] Changed printText to automatically complete a line that is incomplete, i.e. will no longer require \n at the end
+[PrinterSDK] Added justification to printText ({=J})
+[PrinterSDK] Implemented multiple alignings on the same line, i.e. you can use "{=L}Item name {=R}$12.99 and it will be printed correctly on all supported printers, useful for making easy invoices
+[Printer Demo] Rewritten to use NSError based functions, no more exceptions
+[Linea Demo] Added support for deleting authentication and encryption keys, knowing the old keys. When encryption key is deleted, the magnetic card data reverts back to unencrypted.
+[PrinterSDK] Fixed barcode scan not returning last digit
+[PrinterSDK] Added printDelimiter function that prints a complete line of some character, adjusts to the paper width
+[iSerialSDK] Removed from the package, it is integrated into the PrinterSDK
+[Linea Demo] Added encrypted head example code
+[LineaSDK] Added commands to set and get code engine parameters
+[LineaSDK] Added support for code engine firmware updates
+[Linea Demo] Updated to be active in background and using the new timed barcodeEnginePowerControl, requires firmware 2.64. If used with earlier firmware versions it will drain Linea's battery
+[Pinpad Demo] Added GiftShop as additional demo for using Linea, Printer and Pinpad at the same time
+[PrinterSDK] Fixed not properly calculating the font width and height in printText, when DW or DH has been used
+
+1.29
+[LineaSDK] Added functions to read barcode engine ident and update its firmware
+[Linea Demo] Removed ability to enable/disable specific barcode types, was not needed anyway
+[Linea Demo] Now remembers the barcode engine constantly on setting and sets it correctly
+[Linea Demo] Changed the way all firmware update procedures work
+[PrinterSDK] Added functions getPrinterStatus and waitPrintJob
+[iSerialSDK] Created new SDK for iSeral B and R devices
+[PPAD1 Firmware] Updated to 2.01.05
+[Docs] Fixed the search
+[Linea Demo] Converted to ARC
+[LineaSDK] Added support for custom initialization string for the barcode engine (available in firmware 2.44 onward)
+[LineaSDK] Added basic support for RF cards ISO/IEC 15693
+[Linea Demo] Added demo for ISO 15693
+[Linea Demo] Cryptographical part reworked
+[LineaSDK] Added encrypted head support
+[LineaSDK] Added crypto support for firmware 2.43 - key versioning and info, extended notification for the encrypted magnetic card featuring tracks info
+[LineaSDK] Added 200ms delay when disabling bluetooth module, allows for unsent data still in the module to be transmitted
+[Pinpad Demo] Corrected errors and added messages when error conditions occur
+[PinpadSDK] Lots of stability fixes in all functions, SmartCard reset will no longer fail randomly
+[LineaSDK,PrinterSDK,PinpadSDK] Updated for iOS5 - please read the included readme.txt
+[Linea Sample] iOS5 fixes
+[PinpadSDK] Opening text window and the functions that require width or height to be passed now accept 0 as any of those parameters, allowing for automatic calculation
+[Pinpad Demo] Reworked to automatically handle smartcard, wireless cards and magnetic cards, detect if the unit is flipped and only then turns the pinpad screen
+[LineaSDK] Added asynchronous functions to discover printers and generic bluetooth devices, these functions send delegate events to notify of new devices found and discovery status
+[Linea Demo] Updated printer discovery to use the new asynchronous functions
+[Linea Demo] Added support for the JIS cards, including AES256 decoding of them
+[Linea Firmware] Updated to 2.45, see below for changes
+[PrinterSDK] Fixed image printing problem, where some lines of the image might not get printed
+[Printer Demo] Added protocol name for iSerial so no prompt is displayed
+
+1.28
+[LineaSDK] Added support for unencrypted bluetooth communication, you can pass nil for the PIN and if the remote device supports it, it will connect
+[Docs] Updated all to be html based, various fixes and additions
+[LineaSDK,PrinterSDK,PinpadSDK] Fixed sdk reconnects even after disconnect was called
+[PrinterSDK] Fixed sdk giving up trying to connect via iSerial if connection failed last time
+[PrinterSDK] Temporary disabled asian languages detection util complete support for them is implemented
+[PinpadSDK] Fixed communication errors with MPED-400 pinpad
+
+1.27
+[LineaSDK,PrinterSDK,PinpadSDK] Fixed errors in mifare function result codes
+[LineaSDK,PrinterSDK,PinpadSDK] Fixed mfWrite function
+[Linea Sample] Rearranged mifare demo, various fixes and improvements
+
+1.26
+*Added pinpad functionality and samples, support for MPED-400 and PPAD1. In order to receive these, an NDA should be signed
+*[LineaSDK] Added barcodeOpticonSetParams with the ability to save the setting to the flash or leave it temporary only
+*[LineaSDK] Added protection against calling function from a different thread when firmware update is in the progress
+*[LineaSDK] Added notifications for firmware update progress
+*[Library] Fixed buffer overflow issue with lot of incoming data (like scanning multiple barcodes)
+*[Linea Sample] Added progress view for firmware update
+*[Linea Firmware] Updated to 2.36, see below for changes
+*[PrinterSDK] Added beep command
+*[PrinterSDK] Fixed detection of double-byte enabled firmware (chinese, korean, japanese, ..) and sending correct commands, that removes printing exclamation marks on single-byte only printers
+
+1.25
+*[Library] Communication cleanup and optimizations
+*[PrinterSDK] Fixed buffer overflow when the printer is not in protocol mode
+*[PrinterSDK] Implemented data caching in non-protocol mode, results in substantial speed increase
+*[PrinterSDK] Added iSerial support - bridge allowing to attach DPP-250 and DPP-350 printers via cable to the iOS device
+*[Printer Sample] Restored "Scan barcode" and "Read magnetic card" functionality
+*[Printer Sample] Allowing the iOS device to go sleep when printer is connected
+*[Linea Sample] Restored and modified automatic charge: greatly simplified it to match firmware 2.31 and above - enabling charge at any case, the firmware cares of the rest
+*[Linea Sample] Allowing the iOS device to go sleep when printer is connected
+
+1.24
+*[LineaSDK] Fixed universal bluetooth code not sending disconnect notification
+*[LineaSDK] Removed leftover debug
+*[PrinterSDK] Fixed sdkVersion property returning 100 instead of the current sdk version
+*[PrinterSDK] Removed setAlign function, instead, added align to setBarcodeSettings and printImage
+*[Firmware] Updated firmware to 2.34, see below for changes
+
+1.23
+*[Library] Renamed to DTDevices, creating universal library that will support multiple devices
+*[Library] Removed old test printer functions implementation
+*[Library] Rewritten communication, about 10% speed increase, more stable
+*[Library] Added mifare functions
+*[Library] Fixed regression introduced in 1.22 with the function btmGetEnabled
+*[Library] Added printing functions in a separate PrinterSDK supporting PP-60 via direct connection and PP-60, DPP-250 and DPP-350 via bluetooth connection through Linea
+*[Library] Added support for Linea4 with different cpu - LineaPro4L
+*[Library] Fixed large bluetooth communication loses bytes
+*[Library] Added bluetooth streams that can be accessed after btmConnect/prnConnect
+*[Firmware] Updated firmware to 2.33, see below for changes
+*[Sample] Updated bluetooth printing code to match new functions
+*[Sample] Updated LineaDemo to have iPad interface too
+*[Sample] Added Mifare support
+*[Docs] Updated charging notes to match firmware 2.30 charging changes
+*[Docs] Added mifare reader commands
+
+1.22
+*[Library] Reworked some memory handling, resulting in reduced memory usage
+*[Library] Implemented partial workaround for the issue in firmware versions <2.20, will work with unencrypted magnetic cards only
+*[Library] Added support for new bluetooth module
+*[Firmware] Updated firmware to 2.22, see below for changes
+*[Sample] Changed firmware names a bit, changed the function that enumerates them too
+
+1.21
+*[Library] Removed disconnection workaround for previous iOS versions, that was messing with OS 4.2 background enter/leave
+*[Library] Fixed Linea was able to connect even after been told to disconnect
+*[Library] Added cryptoRawAuthenticateiPod and cryptoAuthenticateiPod functions
+*[Sample] Using cryptoAuthenticateiPod before firmware update to ensure it works after authentication key have been set
+*[Firmware] Updated firmware to 2.17, see below for changes
+*[Docs] Updated crypto functions with usage notes, moved them in separate section with extensive documentation of the available functionality
+
+1.20
+*[Library] Removed spaces inside the cardholder number on some cards
+*[Library] Fixed authentication
+*[Sample] Added button to try to authenticated the device, it uses the key data in the "New key" field
+
+1.19
+*[Firmware] Updated firmware to 2.16, see below for changes
+
+1.18
+*[Library] Added sharedDevice function to allocate and access single class instance from anywhere
+[Sample] Cleaned up some commented code
+
+1.17
+*[Library] Added checks so massive data sending does not overflow the buffers, increased write buffers
+*[Library] Fixed small memory leak in connecting code for iOS4
+*[Library] Lots of stability fixes for iOS4
+*[Library] Added cryptographic functions to manage keys, authenticate the device and deal with encrypted magnetic card data, firmware 2.08+
+*[Library] Added support for multiple delegates
+*[Library] Cleaning internal buffers after every command to ensure no sensitive data is left in the memory
+*[Sample] Redesigned on different view controllers, utilizing global Linea class and multiple delegates
+*[Sample] Removed the charge on/off option and replaced with automated charging that starts/stops it according to iOS device battery level
+*[Sample] Added encryption tab to control the crypto functions added in firmware 2.13
+*[Sample] Fixed errors in getFirmwareFileName function, sometimes it was unable to get the proper firmware file name
+*[Docs] Added notes how setCharging should be used
+*[Docs] Small documentation fixes
+*[Firmware] Updated firmware to 2.14, see below for changes
+
+1.16
+*[Library] Compiled with 4.1 SDK
+*[Library] Fixed enableBarcode to read supported barcodes from the device prior to try setting them
+*[Sample] Fixed enabled barcodes checks not being updated when you select Enable all or Disable all barcodes
+
+1.15
+*[Library] Fixed several possible memory leaks in bluetooth code
+*[Library] Added sdkVersion property that gives the version number in format MAJOR*100+MINOR, i.e. 1.15 will be represented as 115
+*[Sample] Showed SDK version on connect
+
+1.14
+*[Firmware] Updated firmware to 2.08, see below for changes
+
+1.13
+*[Library] Reworked fix for the iOS4 and failing commands at startup, should be working in all cases now
+*[Library] Fixed some thread concurrency issues
+*[Sample] Made the sample program pick up the latest firmware file, if more than one version is added to resources
+*[Sample] Fixed releasing unallocated strings
++[Docs] Added iOS4 Synchronization notice in the readme.txt
+*[Firmware] Updated firmware to 2.07, see below for changes
+
+1.12 (TEST)
+*[Library] Added support for identification (setting keys, encrypting data), firmware version 2.05
+*[Library] Added support for keeping on/off the barcode engine (useful for 2D engine),  firmware version 2.05
+*[Library] Fixed weird issue in iOS4 where some commands will fail when sent immediately after device connect
+*[Library] Fixed sending multiple connection states with the same state
+*[Library] Fixed several issues in connect/disconnect code
+*[Sample] Added code/interface to demonstrate the use of the identification and barcode engine power management
+
+1.11 (TEST)
+*[Library] Updated docs on the usage, separate targets no longer needed as the library has both i386/arm code in now
+*[Library] Test fix random crashes when barcodes are received in specific situations
+*[Library] Lowered memory usage by 5k
+
+1.10 (BETA)
+*[Library]Fixed Linea unable to reconnect after being disconnected, until program is restarted
+*[Library]Improved communication
+
+1.09 (BETA)
+*[Library]Recompiled with 3.2 SDK on iPhone SDK 4.0
+*[Sample]Recompiled with 3.2 SDK on iPhone SDK 4.0, target OS is 3.0
+
+1.08 (BETA)
+*[Library]Communication reworked to be universal, internal buffers protected
++[Library]Created universal binary that works on both real devices and simulator
+*[Sample]Removed the 2 targets and cleaned up
+
+1.07 (BETA)
++[Library]Added encrypted magnetic card support 
+*[Sample]Cleaned some memory leaks introduced in 1.04
++[Sample]Added encrypted magnetic card example for receiving, decoding and extracting the data
+
+1.06 (BETA)
+*Fixed very rare communication issue
++Partial support for encrypted magnetic card data
+
+1.05 (BETA)
+*Changed the way communication is done, more cleaner, less prone to errors, still in testing
++Added basic bluetooth image printing. Currently the dithering is disabled due to problems, so only B&W images can be printed
++Added support for 2.01 firmware - functions to control barcode engine directly
+
+1.04 (BETA)
++Added support for Linea Pro 2
++Added bluetooth communication support
++Added basic printing support to bluetooth printers (DPP-250 and DPP-350 are currently supported)
++Added extended barcode types support implemented in 1.11 firmware and commands to enable/disable them
++Updated example application to clean a memory leak and move the charge button to the settings
+
+1.03
+*Changed getCharging/setCharging to work with 1.08 firmware and actually be able to enable/disable charging and return current charge status
+
+1.02
++Added input and output parameter validation to every Linea command
+*Fixed random data being sent along several commands
+*Updated documentation to include firmware update functions
+*Updated charge function to match 1.07 firmware
+*Updated firmware update function to fix a problem that makes firmware update fail at start
+*Fixed SetScanBeep to not require valid array when beep is not enabled
+
+1.01
++Added functions to enable/disable charging and update firmware
+*Updated documentation
+*Updated communication, should not error out when unexpected reply is received to command
+
+1.00
+-Removed leftover functions
+*Updated documentation
++Added pdf documentation
+*Changed setBarcode function name to enableBarcode
+*Reduced memory requires for buffers (from 8k to 512 bytes)
+
+===================================================================================================================================================
+FIRMWARE CHANGELOG
+5.59
+- USB VBUS is not turned on if battery is too low
+- more battery is left for preserving battery protected memory for longer
+- retrying iOS connection when the iOS responds busy
+- read JIS cards from track1 too
+- memory optimizations for Voltage version
+- forcing a turnoff if iOS device is not attached in 30 seconds
+- not connected timeout forced to 30 seconds no matter of the setting
+- several changes to the way firmware handles iOS charging starting and stopping to make it more reliable
+- does not provide VBUS if the iOS is not ready, preventing starting a turned off iOS device
+- added TransArmor support
+- added commands for Newland engine firmware update
+- tweaked battery percentage table, resulting in more accurate battery %
+- fuel gauge units report battery being empty while still reserving some battery to keep the keys/settings
+- Linea won't stay powered on until timeout expires if no ready iOS device is attached
+
+5.58
+- encrypted head is no longer queried for info when command to disable magnetic cards is sent, allowing external control via cable
+- added command to test leds
+- added firmware download mode for intermec barcode engine
+- RC663 (R6) module optimization - faster card detects, more reliable working with FeliCa cards, ability to work both with EMV and R6 module
+
+5.57
+- added support for LineaXS and LineaiMed
+- fixed wrong voltage information returned from fuel gauge units
+- delayed vbus detection for the connection to be stable
+- charging no longer changes while barcode is currently used to prevent premature turning off the charging
+
+5.56
+- changed the way firmware authenticates to prevent situations where you are unable to do OTA updates
+- implemented new way different buttons are sent to the application (SDK 1.94 or higher needed to detect the changes)
+- added ability to control the external speaker button and automatic mode for Inifinea X models
+
+5.55
+- disabling RF engine when program closes
+- resolved issue with inability to connect sometimes when the iOS is powered on
+- added support for LP6
+- changed barcode button to send notifications even without barcode engine installed
+- removed delay between identical barcodes on intermec barcoode engine
+- fixed smartcard issues
+- intermec barcode engine settings made persistent
+- corrected battery level measurements to prevent charging issues
+
+5.54
+- fixed settngs to be kept when downgrading and when settings structure is changed, works from any to any version starting with 5.54, downgrading to old versions still may wipe the settings
+- disabled kiosk mode on all models except LineaTab4 and LineaTabMini
+
+5.53
+- disabling kiosk mode automatically switches to 500mA usb charging or 1A if it was last on 1A
+- settings are saved to flash 5 seconds after last modification
+
+5.52
+- fixed voltage tracks missing start sentinels
+- fixed voltage ETB BASE64 representation having garbage after data end (not 0 padded)
+- added support in InfineaX for 1.53 bluetooth firmware version, allowing bluetooth SPP communication (printing for example) while the audio connection is active, the audio will be cut off during the print out, but will restore after
+
+5.51
+- fixed voltage to allow for disabled key generation by time and/or number of transactions
+- restored default charging to 500mA to avoid problems with cheap chargers
+
+5.50
+- scan speed improvements for newland scanners
+- R6 model RFID communication speed improved
+- added command to temporary disable communication with the iOS (part of iOS7.1.2 fixes)
+- fixed settings corruption on some devices
+- default charging current upped to 1A
+
+5.49
+- added variable charge currents - 500mA, 1A, 2.1A, 2.4A
+- added kiosk mode setting
+
+5.46
+- removed automatic bluetooth pairing for infinea x devices, was causing instability within the iOS
+
+5.45
+- enabling charging tries to enable it right away and returns the status, prevents errors from the sdk function that returned failure, while the charging actually was started
+- enabled cpu encryption in all models (useful for authentication purposes)
+
+5.44
+- enabled 2A charging
+- enabled motion detect for intermec barcode engines
+
+5.43
+- fixed motion detect on opticon barcode engines
+
+5.42
+- charging fixes
+
+5.41
+- reverted intermec speed back to previous, due to being unstable
+
+5.40
+- improved communication speed on intermec barcode engine
+
+5.39
+- fixed Emulated EEMSR (NFC unit) to work correctly with DUKPT keys
+
+5.38
+- changed barcode sound to overwrite current playing sound, useful for batch scanning
+- speeded up Intermec barcode engine reading
+
+5.37
+- limited charging of LineaTabMini to 1A to prevent issues with charger protections activating
+
+5.36
+- implemented ability to receive commands via bluetooth
+- locked flash memory access when cpu encryption is used
+
+5.35
+- fixed the return of getCharging, was always 0 before
+
+5.32
+- updated EMV2 libraries for the NFC unit
+
+5.31
+- fixed wrong operation with new batches of Newland barcode engine
+
+5.28
+- fixed inability to do firmware updates from iOS
+
+5.26
+- implemented Intermec barcode engine configuration (same as LP4)
+
+5.25
+- Medical: added setting to always charge
+- fixed issue turned off device was not charging when put on gang
+- lots of tunes on the RF cards and 663 module
+- enabled reading of FeliCa cards with 663 module
+- added HID support
+
+ 
+5.21
+- fixed issue with EMSR communication
+- added function to control idle timeout
+ 
+5.19
+- enabled control barcodes on Newland engine
+
+5.18
+- fixed USB code
+
+5.17
+- added 2.5us wait after USB reset
+- TabMini led control
+- fixed issues with the RF module communication and iOS6
+- removed the reset beep
+ 
+5.16
+- better handling of the voltage detector
+- better Newland engine power on (works on all engines)
+- fixed incorrect encryption type with EMSR
+- added ability to select tracks to read
+ 
+5.13
+- fixed Newland timeout issue
+- fixed battery measurement
+ 
+5.20
+- fixed sync and gang charger issue
+- Newland enable all barcodes by default
+- saving settings upon disconnect, less chance to lose some
+
+5.08 Initial Lignthing connector release
+- fixed internal packet numbering
+- fixed EMSR timing out after 65 seconds
+- added support for JIS
+- fixed battery indication
+
+3.11
+- fixed 1D Opticon barcode engine not properly starting after wakeup
+
+3.10
+- fixed Code barcode engine new batches require longer startup times
+
+3.01
+- Newland barcode engine fixes (power on/off/sleep)
+ 
+2.99
+- added motion detect for Intermec barcode engine and several fixes to Intermec power on
+
+2.98
+- added ability to read track2 only on magnetic cards
+
+2.97
+- enabled QRCode, Aztek on Intermec engines by default
+
+2.96
+- fixed init commands to Intermec barcode engine were not working
+
+2.95
+- enabled PDF-417 on Code CR800 barcode engines by default
+
+2.94
+- optimized battery usage: in very low battery condition Linea turns off faster
+
+2.93
+- added external serial port support on Linea Tab 2L
+
+2.92
+- fixed issue with opticon 2D engine bluetooth fails to enable before barcode is scanned at least once
+ 
+2.91
+- improved battery consumption by device entering to sleep more often
+ 
+2.90
+- tweaked charging levels and power cutoff levels for devices with encrypted magnetic head to ensure there is enough power left for keeping the keys
+ 
+2.88
+- fixed an issue sometimes when mixing bluetooth commands and normal commands the response will come on the wrong channel
+- added an ability to control the barcode engine while bluetooth is active
+ 
+2.86
+- added support for iPhone powered devices
+- fixed issue with code engine being unable to update firmware
+ 
+2.73
+- changed intermec settings to properly return UPC-A barcode as EAN-13
+
+2.71 BETA
+- added support for Intermec barcode engine
+- added support for bluetooth and barcode to work at the same time, bluetooth data is lost only if you turn on the barcode engine at the time
+- added notification for connected bluetooth device gets disconnected
+
+2.66
+- allowed longer serial numbers to be programmed
+
+2.65
+- disabled restart functionality in Linea-Tab, because it was not correctly working, may reappear at later time
+
+2.64
+- added support for keeping the barcode engine powered for specified timeout in minutes, barcodeEnginePowerControl uses it now
+- added detection of the barcode engines, only on Opticon 2D the barcodeEnginePowerControl, with all the rest, 1D and Code the setting will be ignored, saving energy
+
+2.63
+- added support for updating Code engine OTA
+
+2.62
+- added support for direct access to Code engine
+
+2.61
+- added support for setting key flags via cable
+
+2.60
+- (Linea 4) changed the reset to happen when both buttons are pressed for 5 seconds, the sled beeps 3 times short and restarts
+- (Linea Tab) added reset function when both buttons are pressed for 5 seconds, the sled beeps 3 times short and restarts
+- fixed reading I 2of5 barcodes, with new opticon versions
+
+2.59
+- added support for removing encryption and authentication keys by setting with all 32 bytes 0xFF, you need to know the old key first
+
+2.58
+- added support for separate reporting of the buttons on Linea Tab
+
+2.57
+- added support for Linea 4 with CR8000
+
+2.56
+- added support for scan on button release for Opticon 1D
+
+2.55
+- added support for motion detect on Opticon 1D and 2D barcodes
+- added scan upon release mode, where you aim with the button pressed and the capture is taken upon release
+
+2.54
+- added support for motion detect on CR8000
+
+2.53
+- fixed LineaPad firmware reporting wrong rf certification declaration
+
+2.52
+- fixed barcode buffer overflow issue that was making the unit refuse to scan barcodes
+
+2.51
+- internal release
+
+2.50
+- updated barcode engine core speed to 115200, after the change, older firmware versions will not be able to operate with the barcode engine!!!
+
+2.49
+- supports updating barcode engine firmware from iOS program
+- barcode engine speed optimization resulting in faster transfers of big (2D) barcodes
+- barcode engine communication optimizations, allowing reading of barcodes of unlimited size (the SDK still limits to 1024 bytes)
+- added commands to read device type, model and firmware version from external cable, updated external communication with the barcode engine
+- suppressed "Application not installed" message showing on iOS 5.0.1 when cold boot
+
+2.48
+- supports direct communication with the barcode engine from external cable
+
+2.47
+- support for CODE barcode engine
+- LineaPad disables barcode and mifare functionality when battery is low
+- enabling mifare hardware makes linea not trying to sleep
+
+2.46
+- speeded up connection time by almost a second
+- all leds are turned on when you press both battery and scan buttons
+
+2.45
+- added support for ISO/IEC 15693 cards
+
+2.44
+- added support for custom initialization strings for the barcode engine
+
+2.43
+- added support for AES key versions, both for encrypted head and the normal crypto functions
+- added notification which tracks are stored in the encrypted magnetic card packet
+
+2.42
+- added support for encrypted magnetic head
+
+2.41
+- fixed issue with iOS device's communication dying after many connect/disconnects with Linea
+
+2.40
+- added support for LineaPad
+
+2.39
+- fixed AES code corruption if updating from older firmware
+
+2.38 BETA
+- fixed JIS magnetic card sending bogus data after
+- disabling bluetooth module when the program loses connection with the device
+- removed the sound when connecting or disconnecting the usb cable
+
+2.37
+- lowered 2D barcode engine power consumption in some cases, where barcodeEnginePowerControl is turned on
+- support for JIS II magnetic cards
+
+2.36
+- mifare optimization allowing authenticating next block without the need to go through request/anticollision again
+
+2.35
+- optimized barcode communication, removed sending unnecessary commands
+- barcode engine is now initialized in a background task
+- added support for mifare module
+
+2.34
+- more checks have been added to the authentication sequence to catch and react to communication failures and try to restart the connection
+
+2.33
+- added support for Linea Pro 4L
+
+2.32
+- enabling and disabling charging no longer forces reconnect
+- added ability to force reconnection by pressing barcode and battery buttons at the same time
+
+2.31
+- updated battery voltages at which Linea will turn stop working
+- improved Linea's reaction to low battery conditions, will disconnect gracefully trying to not interrupt existing communication
+
+2.30
+- tweaked battery limits for charging function again, even more power can be dedicated to the iOS device and the charging is allowed at partially discharged Lineas too
+- implemented better workaround for the iPhone 4 freeze on startup
+- better Linea response to several communication errors that should not normally happen, Linea will be able to restore connection in these cases
+
+2.29
+- tweaked battery limits on Linea charging function, now charging can be performed only if Linea's battery is full or near full and will give more power to the iOS device in a single charging pass
+
+2.28
+- fixed barcode data can be sent on the wrong channel and gets lost if barcode and magnetic card are scanned at the same time
+
+2.27
+- workaround for some iPhone 4 that freeze on startup with Linea connected and give error message after about 15 seconds
+
+2.25-2.26
+Internal releases
+
+2.22
+- fixed reading of barcodes with <CR> inside
+- changed barcode initialization to enable composite barcodes reading and improve reading quality
+
+2.21
+- barcode initialization changes, resulting in better recognition on shiny surfaces
+- changed authentication sequence, so it complies with the ATS 2.0 software
+
+2.20
+- fixed Linea may sometimes send magnetic card data with wrong session id, resulting in data loss
+
+2.19
+- added hardware support for Linea 4
+
+2.18
+- fixed issue where the reader may fail to go to sleep after reading magnetic card, while in a sleep state, resulting in constant battery drain until iOS requests connection again
+
+2.17
+- added support for different flash memory chip
+- fixed some settings are being destroyed when firmware update is done from the iOS device
+
+2.16
+- added GS1 Databar barcode series support
+
+2.15
+- changed algorithm for calculating remaining battery, should be more stable now and not jump around
+
+2.14
+- increased communication buffer size, that was preventing the firmware update from functioning properly
+
+2.13
+- changed the get charging command to return separate values when charge is from the own battery or external power
+- removed previous attempt to provide authentication with AES128 key
+- added AES256 encryption of the card data upon request, support for multiple encryption keys, ability to load keys OTA (using encryption with previous key)
+- reintroduced device authentication using separate AES256 key
+- ability to detect and enable synchronization when usb cable is connected (works only on latest batch of Linea 1.0 boards and on all official Linea 1.5 and 2.0 releases)
+
+2.09-2.12
+Internal releases
+
+2.08
+- fixed Linea sometimes stalls for 1.8 seconds if magnetic cards are scanned extremely fast
+
+2.07
+- minor fix in authentication part to comply wit ATS 1.5
+
+2.06
+- minor fix to not send DevACK after AckDevAuthenticationInfo
+
+2.05
+- merged Linea 1.0 and 1.5 source code base
+- added commands to set AES128 key and then encrypt a single block of data and return it, useful for distinguishing specific device
+- added command to disable automatic turning off the barcode engine, and instead of that keeping it in low power mode (useful to keep the 2D barcode engine powered, so next scan is instant)
+
+2.02
+- Linea will electrically disconnect and reconnect upon entering/leaving sync mode
+- Linea will stay connected in sync mode, allowing to operate with both the iPod and the Linea while they are connected to each other (loading software, on device debug)
+
+2.01 
+- speeded up barcode scanning, generally the barcode scanning will be more responsive 
+- added functions to control barcode engine directly 
+
+2.00 (this version is based on 1.08 so it contains charging. Additional commands will be added to control the barcode engine directly) 
+- fixed track 2 data being returned with track 1 markers if the card is missing track 1 
+- added new command to switch to extended barcode types mode. In this mode, following barcode types are supported: 
+UPC-A 
+Codabar 
+Code 25 NI 2of5 
+Code 25 I 2of5 
+Code 39 
+Code 93 
+Code 128 
+Code 11 
+CPC Binary 
+DUN 14 
+EAN 2 
+EAN 5 
+EAN 8 
+EAN 13 
+UCC/EAN 128 
+GS1 DataBar 
+ITF14 
+Latent image barcode 
+Pharmacode 
+PLANET 
+POSTNET 
+Intelligent Mail Barcode 
+MSI/Plessey 
+PostBar 
+RM4SCC / KIX 
+Telepen 
+UK/Plessey 
+PDF417 
+uPDF417 
+Data Matrix 
+Aztek 
+QR Code 
+Maxi Code 
+UPC-A+2 
+UPC-A+5 
+UPC-E 
+UPC-E+2 
+UPC-E+5 
+EAN-13+2 
+EAN-13+5 
+EAN-8+2 
+EAN-8+5 
+Code 39 FULL ASCII 
+Italian Pharmaceutical 
+Codabar ABC 
+Codabar CX 
+S-Code 
+Matrix 2of5 
+IATA 
+Korean Postal Authority 
+CC-A 
+CC-B 
+CC-C 
+
+1.10 (based on 1.07 code) 
+- fixed track 2 data being returned with track 1 markers if the card is missing track 1 
+
+1.08 (internal) 
+- upon starting charge, Linea will electrically disconnect, then reconnect again, allowing to communicate while charging 
+
+1.07 
+- added validation to every command parameters and ST1 is used to notify about the result of the operation 
+- fixed command for setting beep sound was returning 1 byte less 
+- fixed command for playing sound was returning random byte at the end 
+- enable charging command modified - instead of being a single command to start the charge, it was modified into SET/GET command and accepting ENABLE/DISABLE charging to be ready for the future, when Linea will be able to charge and communicate at the same time 
+- fixed charging command repeats the answer if the Linea's voltage is too low to start the charge 
+- fixed Linea goes to IdentifyDeviceLingoes only when receiving Bad parameter to StartIDPS, it was going there on invalid packets too 
+- added a check for battery level right after reset that was missing, Linea will no longer try to authenticate and turn off when battery is extremely low 
+
+1.06 
+- fixed command to get the current status of sync mode (was returning 0 every time) 
+- fixed loading of serial number was not always successful and had to be repeated 
+
+1.05 
+- first officially released 
+

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController storyboardIdentifier="Scan" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" userLabel="Main" customClass="MainViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Scanner not connected" translatesAutoresizingMaskIntoConstraints="NO" id="WsT-vh-Kia">
+                                <rect key="frame" x="0.0" y="421" width="375" height="246"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="IzV-vR-DHb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyo-RQ-PNi">
+                                <rect key="frame" x="54" y="355" width="267" height="40"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <state key="normal" title="SCAN BARCODE">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onScanDown" destination="W5J-7L-Pyd" eventType="touchDown" id="gQG-Lg-N9a"/>
+                                    <action selector="onScanUp" destination="W5J-7L-Pyd" eventType="touchUpOutside" id="J5b-id-fDp"/>
+                                    <action selector="onScanUp" destination="W5J-7L-Pyd" eventType="touchUpInside" id="ucJ-gj-6l7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeH-bM-6E7">
+                                <rect key="frame" x="283" y="20" width="86" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="100%,4.1v" backgroundImage="0.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBattery" destination="9pv-A4-QxB" eventType="touchUpInside" id="RMf-u2-CZ9"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="charging" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-wb-1FY">
+                                <rect key="frame" x="264" y="19" width="19" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WsT-vh-Kia" secondAttribute="trailing" id="4JA-hs-izb"/>
+                            <constraint firstItem="Kyo-RQ-PNi" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="38" id="D2k-58-Gp2"/>
+                            <constraint firstItem="WsT-vh-Kia" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="Ej2-AL-GnC"/>
+                            <constraint firstItem="Kyo-RQ-PNi" firstAttribute="centerX" secondItem="WsT-vh-Kia" secondAttribute="centerX" id="Jel-u5-ii3"/>
+                            <constraint firstItem="WsT-vh-Kia" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ZXB-OO-vUg"/>
+                            <constraint firstItem="WsT-vh-Kia" firstAttribute="top" secondItem="Kyo-RQ-PNi" secondAttribute="bottom" constant="26" id="jdw-mz-Fit"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kyo-RQ-PNi" secondAttribute="trailing" constant="38" id="pnW-oU-qB9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="btBattery" destination="GeH-bM-6E7" id="lJ8-Bc-2LN"/>
+                        <outlet property="btScan" destination="Kyo-RQ-PNi" id="Ss3-7m-pgA"/>
+                        <outlet property="ivCharging" destination="0Px-wb-1FY" id="4RP-EW-r4g"/>
+                        <outlet property="tvInfo" destination="WsT-vh-Kia" id="H2n-xw-F0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Print-->
+        <scene sceneID="w72-IG-cnD">
+            <objects>
+                <viewController storyboardIdentifier="Print" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6xH-UV-aQN" userLabel="Print" customClass="PrintViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tPy-IL-ySj"/>
+                        <viewControllerLayoutGuide type="bottom" id="cy4-nD-Eyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ya-CA-EyH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baK-7S-JZO">
+                                <rect key="frame" x="71" y="97" width="233" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Print self test">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSelfTest" destination="ePf-Pk-ci7" eventType="touchUpInside" id="wyD-7K-QzK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSt-s0-2sL">
+                                <rect key="frame" x="71" y="218" width="233" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Calibrate BlackMark">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalibrate" destination="ePf-Pk-ci7" eventType="touchUpInside" id="mGC-xU-SMg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwi-cY-zxQ">
+                                <rect key="frame" x="71" y="180" width="233" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Demo barcodes">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBarcodesDemo" destination="ePf-Pk-ci7" eventType="touchUpInside" id="ZA1-OP-LaB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR8-1O-DYO">
+                                <rect key="frame" x="71" y="263" width="233" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Print Label">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPrintLabelDemo" destination="ePf-Pk-ci7" eventType="touchUpInside" id="kML-4h-zIj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nC-6U-ehy">
+                                <rect key="frame" x="71" y="142" width="233" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Demo fonts">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFontsDemo" destination="ePf-Pk-ci7" eventType="touchUpInside" id="tpc-B1-e70"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="OUT OF PAPER" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zQu-Ba-piJ">
+                                <rect key="frame" x="54" y="27.5" width="267" height="41.5"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.80013018846511841" green="0.0" blue="0.055734477937221527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GN-0n-Ee6">
+                                <rect key="frame" x="71" y="308" width="233" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Demo graphic">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGraphicsDemo" destination="ePf-Pk-ci7" eventType="touchUpInside" id="Hl4-fx-Ex5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Print" image="first" id="SBh-1e-Lyq" userLabel="Print"/>
+                    <connections>
+                        <outlet property="lbPaperStatus" destination="zQu-Ba-piJ" id="wZS-fG-N9p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePf-Pk-ci7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-994"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController storyboardIdentifier="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8rJ-Kc-sve" userLabel="Settings" customClass="SettingsViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="eHB-zf-RtX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" textLabel="9xi-z4-soQ" detailTextLabel="NU6-X2-PLL" style="IBUITableViewCellStyleSubtitle" id="tKA-5l-hFO">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tKA-5l-hFO" id="MwR-0i-mO7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9xi-z4-soQ">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NU6-X2-PLL">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="YKv-zy-3Sv"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="8Hx-yS-3p5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eHB-zf-RtX" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="7MU-Ui-1Ol"/>
+                            <constraint firstItem="eHB-zf-RtX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="8rv-LT-86B"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="eHB-zf-RtX" secondAttribute="bottom" id="FEW-Hm-jxh"/>
+                            <constraint firstItem="eHB-zf-RtX" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="KmW-Zj-eBa"/>
+                            <constraint firstAttribute="trailing" secondItem="eHB-zf-RtX" secondAttribute="trailing" id="bH4-Rc-E0t"/>
+                            <constraint firstAttribute="trailing" secondItem="eHB-zf-RtX" secondAttribute="trailing" id="kHd-NB-aTJ"/>
+                            <constraint firstItem="eHB-zf-RtX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="mdO-FM-tY3"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="eHB-zf-RtX" secondAttribute="bottom" id="sr4-eU-hx2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="cPa-gy-q4n" userLabel="Settings"/>
+                    <connections>
+                        <outlet property="tvSettings" destination="eHB-zf-RtX" id="hm7-OA-tsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="MainTabBarController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Crypto-->
+        <scene sceneID="hBT-pV-ACO">
+            <objects>
+                <viewController storyboardIdentifier="Crypto" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B1H-Wr-fXI" userLabel="Crypto" customClass="CryptoViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ctf-Wq-oN3"/>
+                        <viewControllerLayoutGuide type="bottom" id="L5Z-Pr-U7q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="42o-7U-8Jy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tzj-Zr-RAY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableCell" textLabel="l1T-D4-8Sc" detailTextLabel="R0B-9i-z6n" style="IBUITableViewCellStyleSubtitle" id="UQM-Yk-jcX">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UQM-Yk-jcX" id="aF0-KU-SdQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l1T-D4-8Sc">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R0B-9i-z6n">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="B1H-Wr-fXI" id="7mR-5z-HiD"/>
+                                    <outlet property="delegate" destination="B1H-Wr-fXI" id="G0z-NQ-gQE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tzj-Zr-RAY" secondAttribute="trailing" id="1xG-3R-U4w"/>
+                            <constraint firstItem="L5Z-Pr-U7q" firstAttribute="top" secondItem="Tzj-Zr-RAY" secondAttribute="bottom" id="5Fx-g6-FkT"/>
+                            <constraint firstItem="Tzj-Zr-RAY" firstAttribute="top" secondItem="42o-7U-8Jy" secondAttribute="top" id="7m7-ea-U7J"/>
+                            <constraint firstItem="Tzj-Zr-RAY" firstAttribute="top" secondItem="42o-7U-8Jy" secondAttribute="top" id="QcM-vU-Weo"/>
+                            <constraint firstItem="Tzj-Zr-RAY" firstAttribute="leading" secondItem="42o-7U-8Jy" secondAttribute="leading" id="ZRa-i9-SeY"/>
+                            <constraint firstItem="Tzj-Zr-RAY" firstAttribute="leading" secondItem="42o-7U-8Jy" secondAttribute="leading" id="ayL-fl-Jgg"/>
+                            <constraint firstItem="L5Z-Pr-U7q" firstAttribute="top" secondItem="Tzj-Zr-RAY" secondAttribute="bottom" id="cPR-Lb-ckU"/>
+                            <constraint firstAttribute="trailing" secondItem="Tzj-Zr-RAY" secondAttribute="trailing" id="jOj-wN-xLE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="EMSR" image="lock" id="Met-6J-naK" userLabel="Crypto"/>
+                    <connections>
+                        <outlet property="tvCrypto" destination="Tzj-Zr-RAY" id="65M-UW-xPM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WlW-no-fqX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
+        <!--EMV-->
+        <scene sceneID="lJ6-ls-747">
+            <objects>
+                <viewController storyboardIdentifier="EMV" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j8X-td-t91" userLabel="EMV" customClass="EMVViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zeh-je-gb0"/>
+                        <viewControllerLayoutGuide type="bottom" id="yFj-lf-jw9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbz-xc-N87">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-hz-8ah">
+                                <rect key="frame" x="0.0" y="41" width="375" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dc-GD-ot7">
+                                <rect key="frame" x="55" y="559" width="265" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Perform Transaction">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTransaction" destination="j8X-td-t91" eventType="touchUpInside" id="uVE-4L-XSP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="EMV" image="first" id="X1a-HX-IfQ"/>
+                    <connections>
+                        <outlet property="tvInfo" destination="eSe-hz-8ah" id="ENh-v6-cmD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww6-Sx-hnK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="-982.75862068965523"/>
+        </scene>
+        <!--EMVMS-->
+        <scene sceneID="r8r-PV-xWK">
+            <objects>
+                <viewController storyboardIdentifier="EMVMS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3IU-SD-54g" userLabel="EMVMS" customClass="EMVMSViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bkp-5j-Lr3"/>
+                        <viewControllerLayoutGuide type="bottom" id="5q7-LF-Vc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YZC-AG-Lt4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzB-uF-Hq0">
+                                <rect key="frame" x="0.0" y="41" width="375" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-OD-Z30">
+                                <rect key="frame" x="55" y="560" width="265" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Perform EMVMS Transaction">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTransaction" destination="3IU-SD-54g" eventType="touchUpInside" id="4OW-hS-eeT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="EMVMS" image="first" id="85z-7T-Q7q" userLabel="EMVMS"/>
+                    <connections>
+                        <outlet property="tvInfo" destination="BzB-uF-Hq0" id="4M5-kw-NQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAy-4k-IY3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762.39999999999998" y="-982.75862068965523"/>
+        </scene>
+        <!--RF-->
+        <scene sceneID="UsJ-Nl-3SE">
+            <objects>
+                <viewController storyboardIdentifier="RF" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ixQ-CV-efS" userLabel="RF" customClass="RFViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3x3-kW-hdI"/>
+                        <viewControllerLayoutGuide type="bottom" id="AoA-d3-Eaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pFb-lX-9mQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FC-Kl-jxO">
+                                <rect key="frame" x="0.0" y="41" width="375" height="626"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RF" image="first" id="GRh-Ab-Yzp" userLabel="RF"/>
+                    <connections>
+                        <outlet property="tvInfo" destination="2FC-Kl-jxO" id="e1z-Fj-KTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8v-8j-XoX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1421.7391304347827" y="-982.33695652173924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0.png" width="200" height="52"/>
+        <image name="charging" width="119" height="288"/>
+        <image name="first" width="30" height="30"/>
+        <image name="lock" width="32" height="32"/>
+        <image name="settings" width="26" height="28"/>
+    </resources>
+</document>

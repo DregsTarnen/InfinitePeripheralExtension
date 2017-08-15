@@ -12,6 +12,10 @@
 		775BB3EF1F43379F00027880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775BB3ED1F43379F00027880 /* Main.storyboard */; };
 		775BB3F11F43379F00027880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775BB3F01F43379F00027880 /* Assets.xcassets */; };
 		775BB3F41F43379F00027880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775BB3F21F43379F00027880 /* LaunchScreen.storyboard */; };
+		775BB3FC1F43380E00027880 /* ScannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BB3FB1F43380E00027880 /* ScannerData.swift */; };
+		775BB3FE1F43388B00027880 /* ScannerPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BB3FD1F43388B00027880 /* ScannerPreferences.swift */; };
+		775BB4021F433CE200027880 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775BB4011F433CE200027880 /* ExternalAccessory.framework */; };
+		775BB4031F433D0000027880 /* libdtdev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 775BB3FF1F433C8300027880 /* libdtdev.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		775BB3F01F43379F00027880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		775BB3F31F43379F00027880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		775BB3F51F43379F00027880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		775BB3FB1F43380E00027880 /* ScannerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerData.swift; sourceTree = "<group>"; };
+		775BB3FD1F43388B00027880 /* ScannerPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerPreferences.swift; sourceTree = "<group>"; };
+		775BB3FF1F433C8300027880 /* libdtdev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdtdev.a; path = InfinitePeripheralExtension/libdtdev.a; sourceTree = "<group>"; };
+		775BB4011F433CE200027880 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		775BB4041F433D3500027880 /* DTDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDevices.h; path = InfinitePeripheralExtension/DTDevices.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775BB4031F433D0000027880 /* libdtdev.a in Frameworks */,
+				775BB4021F433CE200027880 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +49,11 @@
 		775BB3DD1F43379F00027880 = {
 			isa = PBXGroup;
 			children = (
+				775BB4041F433D3500027880 /* DTDevices.h */,
+				775BB3FF1F433C8300027880 /* libdtdev.a */,
 				775BB3E81F43379F00027880 /* InfinitePeripheralExtension */,
 				775BB3E71F43379F00027880 /* Products */,
+				775BB4001F433CE200027880 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +74,18 @@
 				775BB3F01F43379F00027880 /* Assets.xcassets */,
 				775BB3F21F43379F00027880 /* LaunchScreen.storyboard */,
 				775BB3F51F43379F00027880 /* Info.plist */,
+				775BB3FB1F43380E00027880 /* ScannerData.swift */,
+				775BB3FD1F43388B00027880 /* ScannerPreferences.swift */,
 			);
 			path = InfinitePeripheralExtension;
+			sourceTree = "<group>";
+		};
+		775BB4001F433CE200027880 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				775BB4011F433CE200027880 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				775BB3EC1F43379F00027880 /* ViewController.swift in Sources */,
+				775BB3FC1F43380E00027880 /* ScannerData.swift in Sources */,
 				775BB3EA1F43379F00027880 /* AppDelegate.swift in Sources */,
+				775BB3FE1F43388B00027880 /* ScannerPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -263,11 +289,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PFAW8AS54X;
 				INFOPLIST_FILE = InfinitePeripheralExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com..InfinitePeripheralExtension;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InfinitePeripheralExtension",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.efritts.InfinitePeripheralExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = InfinitePeripheralExtension/DTDevices.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -276,11 +309,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PFAW8AS54X;
 				INFOPLIST_FILE = InfinitePeripheralExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com..InfinitePeripheralExtension;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InfinitePeripheralExtension",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.efritts.InfinitePeripheralExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = InfinitePeripheralExtensionDTDevices.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

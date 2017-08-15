@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglist>
+    <!--Configuration Information-->
+    <tag id="E4">
+        <!--Configuration Version / Returned Online Tags-->
+        <tag id="C1">00000009</tag>
+    </tag>
+    <!--Terminal configuration-->
+    <tag id="E0">
+        <!--Terminal Type-->
+        <tag id="9F35">21</tag>
+        <!--Transaction Currency Exponent-->
+        <tag id="5F36">02</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">A02000</tag>
+        <!--Terminal Country Code-->
+        <tag id="9F1A">0840</tag>
+    </tag>
+    <!--Returned tags-->
+    <tag id="E5">
+        <!--Configuration Version / Returned Online Tags-->
+        <tag id="C1">D1D29F029F039F26829F365F349F7C9F6E9F109F1A955F2A9A9C9F375F349F669F39DF029F339F275F245F2A5A5657</tag>
+        <!--Returned Complete Tags-->
+        <tag id="C2">D1D256579F6BD3D49F1C9F219F41849BDFDC9F029F039F26829F365F349F7C9F6E9F109F1A959A9C9F375F349F669F39DF029F339F275F245F2A5A</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Kernel ID-->
+        <tag id="DF810C">04</tag>
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A00000002501</tag>
+        <!--Application Version Number-->
+        <tag id="9F09">0001</tag>
+        <!--Terminal Action Code - Denial-->
+        <tag id="DF8121">0000000000</tag>
+        <!--Terminal Action Code - Default-->
+        <tag id="DF8120">0000000000</tag>
+        <!--Terminal Action Code - Online-->
+        <tag id="DF8122">0000000000</tag>
+        <!--Interface Device (IFD) Serial Number-->
+        <tag id="9F1E">3630323333323132</tag>
+        <!--Merchant Identifier-->
+        <tag id="9F16">111213141516171819202122232425</tag>
+        <tag id="DFC312">01</tag>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">B0000003241010</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">0F</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">602800</tag>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A000000324101001</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">0F</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">602800</tag>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A0000003241010</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">0F</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">602800</tag>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Terminal Capabilities-->
+        <tag id="9F33">A02000</tag>
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A0000000041010</tag>
+        <!--Hold Time Value-->
+        <tag id="DF8130">0D</tag>
+        <!--Phone Message Table-->
+        <tag id="DF8131">00080000080020000004000004002000000100000100200000020000020020000000000000000700</tag>
+        <!--Default UDOL-->
+        <tag id="DF811A">9F6A04</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">02</tag>
+        <!--VLP Reset Threshold-->
+        <tag id="9F6D">0001</tag>
+        <!--Mag-stripe CVM Capability - CVM Required-->
+        <tag id="DF811E">10</tag>
+        <!--Mag-stripe CVM Capability - No CVM Required-->
+        <tag id="DF812C">00</tag>
+        <!--Reader Contactless Transaction Limit (No On-device CVM)-->
+        <tag id="DF8124">000000030000</tag>
+        <!--Reader Contactless Transaction Limit (On-device CVM)-->
+        <tag id="DF8125">000000050000</tag>
+        <!--Terminal Type-->
+        <tag id="9F35">14</tag>
+        <!--Reader CVM Required Limit-->
+        <tag id="DF8126">000000020000</tag>
+        <!--Mobile Support Indicator-->
+        <tag id="9F7E"/>
+        <!--Terminal Identification-->
+        <tag id="9F1C"/>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Terminal Capabilities-->
+        <tag id="9F33">A02000</tag>
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A0000000043060</tag>
+        <!--Hold Time Value-->
+        <tag id="DF8130">0D</tag>
+        <!--Phone Message Table-->
+        <tag id="DF8131">00080000080020000004000004002000000100000100200000020000020020000000000000000700</tag>
+        <!--Default UDOL-->
+        <tag id="DF811A">9F6A04</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">02</tag>
+        <!--VLP Reset Threshold-->
+        <tag id="9F6D">0001</tag>
+        <!--Mag-stripe CVM Capability - CVM Required-->
+        <tag id="DF811E">10</tag>
+        <!--Mag-stripe CVM Capability - No CVM Required-->
+        <tag id="DF812C">00</tag>
+        <!--Reader Contactless Transaction Limit (No On-device CVM)-->
+        <tag id="DF8124">000000030000</tag>
+        <!--Reader Contactless Transaction Limit (On-device CVM)-->
+        <tag id="DF8125">000000050000</tag>
+        <!--Terminal Type-->
+        <tag id="9F35">14</tag>
+        <!--Reader CVM Required Limit-->
+        <tag id="DF8126">000000030000</tag>
+        <!--Mobile Support Indicator-->
+        <tag id="9F7E"/>
+        <!--Terminal Identification-->
+        <tag id="9F1C"/>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A0000000031010</tag>
+        <tag id="DFC201">A0000000031010</tag>
+        <!--Terminal Floor Limit-->
+        <tag id="9F1B">00000000</tag>
+        <tag id="DFC30E">000009C4</tag>
+        <!--Card CVM Limit-->
+        <tag id="9F6B">000009C4</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">E06808</tag>
+        <!--Terminal Action Code - Default-->
+        <tag id="DF8120">0000000000</tag>
+        <!--Terminal Action Code - Denial-->
+        <tag id="DF8121">0000000000</tag>
+        <!--Terminal Action Code - Online-->
+        <tag id="DF8122">0000000000</tag>
+        <!--Terminal Country Code-->
+        <tag id="9F1A">0100</tag>
+        <!--Transaction Currency Code-->
+        <tag id="5F2A">0975</tag>
+        <!--Additional Terminal Capabilities-->
+        <tag id="9F40">7000B0A000</tag>
+        <tag id="DFC30C">000DBBA0</tag>
+        <!--Terminal Transaction Qualifiers (TTQ)-->
+        <tag id="9F66">36004000</tag>
+        <tag id="DFC30D">00000000</tag>
+        <!--Application Version Number-->
+        <tag id="9F09">008C</tag>
+        <!--PIN Try Limit-->
+        <tag id="DF03">01</tag>
+        <!--PIN Try Counter (VSDC Application)-->
+        <tag id="DF04">01</tag>
+        <!--Transaction Currency Exponent-->
+        <tag id="5F36">02</tag>
+        <!--VLP Reset Threshold-->
+        <tag id="9F6D">0001</tag>
+        <!--Consecutive Transaction Counter Limit (CTCL)-->
+        <tag id="9F58">00</tag>
+        <!--Consecutive Transaction International Upper Limit (CTIUL)-->
+        <tag id="9F5E">0000</tag>
+        <!--Application Program Identifier (Program ID)-->
+        <tag id="9F5A">00</tag>
+        <!--Consecutive Transaction Counter Upper Limit (CTCUL)-->
+        <tag id="9F59">000000</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">03</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Additional Terminal Capabilities-->
+        <tag id="9F40">6000005001</tag>
+        <!--Terminal Floor Limit-->
+        <tag id="9F1B">00002710</tag>
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A0000000999090</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">03</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">2008C8</tag>
+        <tag id="DFDE01">9F660480000000</tag>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Additional Terminal Capabilities-->
+        <tag id="9F40">6000005001</tag>
+        <!--Terminal Floor Limit-->
+        <tag id="9F1B">00002710</tag>
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A00000999901</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">03</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">2008C8</tag>
+        <tag id="DFDE01">9F660480000000</tag>
+        <tag id="DFC309">00</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">B0000003241010</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">602800</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">06</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A000000324101001</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">602800</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">06</tag>
+    </tag>
+    <!-- Application Configuration-->
+    <tag id="E1">
+        <!--Application Identifier (AID) - terminal-->
+        <tag id="9F06">A0000003241010</tag>
+        <!--Terminal Capabilities-->
+        <tag id="9F33">602800</tag>
+        <!--Kernel ID-->
+        <tag id="DF810C">06</tag>
+    </tag>
+</taglist>

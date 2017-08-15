@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF07C5C81E0007C400362C9B /* EMVMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07C5C71E0007C400362C9B /* EMVMSViewController.swift */; };
+		FF07C5CA1E000ED100362C9B /* RFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07C5C91E000ED100362C9B /* RFViewController.swift */; };
+		FF11BD2A1BB94B3500BCD1DC /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF11BD291BB94B3500BCD1DC /* Globals.swift */; };
+		FF20D1F41DADAB7B000BB69F /* SettingsAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20D1F31DADAB7B000BB69F /* SettingsAlgorithm.swift */; };
+		FF26C74D1BB412E400C9F653 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26C74C1BB412E400C9F653 /* CryptoViewController.swift */; };
+		FF26C74F1BB4178600C9F653 /* CryptoTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26C74E1BB4178600C9F653 /* CryptoTemplate.swift */; };
+		FF26C7511BB41BEB00C9F653 /* CryptoAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26C7501BB41BEB00C9F653 /* CryptoAlgorithm.swift */; };
+		FF26C7531BB4315400C9F653 /* CryptoEMSR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26C7521BB4315400C9F653 /* CryptoEMSR.swift */; };
+		FF2B871D1DFFED9C0090C60D /* EMVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B871C1DFFED9C0090C60D /* EMVViewController.swift */; };
+		FF2B87201DFFF1C70090C60D /* EMVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B871E1DFFF1C70090C60D /* EMVHelper.swift */; };
+		FF2B87211DFFF1C70090C60D /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B871F1DFFF1C70090C60D /* XML.swift */; };
+		FF2B87231DFFF28A0090C60D /* Config in Resources */ = {isa = PBXBuildFile; fileRef = FF2B87221DFFF28A0090C60D /* Config */; };
+		FF3BFF661BA42C80001B9633 /* SettingsBarcodeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BFF651BA42C80001B9633 /* SettingsBarcodeMode.swift */; };
+		FF603AE41BA1923C00550DEF /* libdtdev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF603AE31BA1923C00550DEF /* libdtdev.a */; };
+		FF603AE61BA1A4BB00550DEF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF603AE51BA1A4BB00550DEF /* MainTabBarController.swift */; };
+		FF6BA1A41B94783900FBE15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1A31B94783900FBE15D /* AppDelegate.swift */; };
+		FF6BA1A61B94783900FBE15D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1A51B94783900FBE15D /* MainViewController.swift */; };
+		FF6BA1A81B94783900FBE15D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1A71B94783900FBE15D /* SettingsViewController.swift */; };
+		FF6BA1AB1B94783900FBE15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6BA1A91B94783900FBE15D /* Main.storyboard */; };
+		FF6BA1AD1B94783900FBE15D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF6BA1AC1B94783900FBE15D /* Images.xcassets */; };
+		FF6BA1B01B94783900FBE15D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF6BA1AE1B94783900FBE15D /* LaunchScreen.xib */; };
+		FF6BA1CF1B94862200FBE15D /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6BA1CE1B94862200FBE15D /* ExternalAccessory.framework */; };
+		FF6BA1D41B97060F00FBE15D /* SettingsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1D31B97060F00FBE15D /* SettingsTemplate.swift */; };
+		FF6BA1D61B970EDE00FBE15D /* SettingsGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1D51B970EDE00FBE15D /* SettingsGeneral.swift */; };
+		FF6BA1D81B97196000FBE15D /* SettingsTCPIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1D71B97196000FBE15D /* SettingsTCPIP.swift */; };
+		FF6BA1DA1B9728FB00FBE15D /* SettingsBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1D91B9728FB00FBE15D /* SettingsBT.swift */; };
+		FF6BA1DD1B989B1E00FBE15D /* PrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6BA1DC1B989B1E00FBE15D /* PrintViewController.swift */; };
+		FFBAD9671BCFCB4200FF841A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBAD9621BCFCB4200FF841A /* Utils.swift */; };
+		FFBAD9681BCFCB4200FF841A /* BerTlv.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBAD9631BCFCB4200FF841A /* BerTlv.swift */; };
+		FFBAD9691BCFCB4200FF841A /* EMVTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBAD9641BCFCB4200FF841A /* EMVTags.swift */; };
+		FFBAD96A1BCFCB4200FF841A /* SwiftDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBAD9651BCFCB4200FF841A /* SwiftDate.swift */; };
+		FFBAD96B1BCFCB4200FF841A /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBAD9661BCFCB4200FF841A /* Progress.swift */; };
+		FFF613201BA31C7E002A81F7 /* SettingsBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF6131F1BA31C7E002A81F7 /* SettingsBarcode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF07C5C71E0007C400362C9B /* EMVMSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMVMSViewController.swift; sourceTree = "<group>"; };
+		FF07C5C91E000ED100362C9B /* RFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFViewController.swift; sourceTree = "<group>"; };
+		FF11BD291BB94B3500BCD1DC /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		FF20D1F31DADAB7B000BB69F /* SettingsAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAlgorithm.swift; sourceTree = "<group>"; };
+		FF26C74C1BB412E400C9F653 /* CryptoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		FF26C74E1BB4178600C9F653 /* CryptoTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTemplate.swift; sourceTree = "<group>"; };
+		FF26C7501BB41BEB00C9F653 /* CryptoAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoAlgorithm.swift; sourceTree = "<group>"; };
+		FF26C7521BB4315400C9F653 /* CryptoEMSR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoEMSR.swift; sourceTree = "<group>"; };
+		FF2B871C1DFFED9C0090C60D /* EMVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMVViewController.swift; sourceTree = "<group>"; };
+		FF2B871E1DFFF1C70090C60D /* EMVHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EMVHelper.swift; path = ../../Shared/EMVHelper.swift; sourceTree = "<group>"; };
+		FF2B871F1DFFF1C70090C60D /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XML.swift; path = ../../Shared/XML.swift; sourceTree = "<group>"; };
+		FF2B87221DFFF28A0090C60D /* Config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Config; sourceTree = "<group>"; };
+		FF3BFF651BA42C80001B9633 /* SettingsBarcodeMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBarcodeMode.swift; sourceTree = "<group>"; };
+		FF603AE31BA1923C00550DEF /* libdtdev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdtdev.a; path = "../../../Library/Developer/Xcode/DerivedData/DTDevices-eabqmuwhlgxtbtfktnvlfzzpybey/Build/Products/Debug-iphoneos/libdtdev.a"; sourceTree = "<group>"; };
+		FF603AE51BA1A4BB00550DEF /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FF6BA19E1B94783900FBE15D /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6BA1A21B94783900FBE15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6BA1A31B94783900FBE15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF6BA1A51B94783900FBE15D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FF6BA1A71B94783900FBE15D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FF6BA1AA1B94783900FBE15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF6BA1AC1B94783900FBE15D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF6BA1AF1B94783900FBE15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FF6BA1CA1B94787000FBE15D /* DTDevices-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DTDevices-Bridging-Header.h"; path = "SwiftDemo/DTDevices-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF6BA1CE1B94862200FBE15D /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		FF6BA1D01B948F2900FBE15D /* DTDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDevices.h; path = ../Library/DTDevices.h; sourceTree = "<group>"; };
+		FF6BA1D11B948F2900FBE15D /* EMVPrivateTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMVPrivateTags.h; path = ../Library/EMVPrivateTags.h; sourceTree = "<group>"; };
+		FF6BA1D21B948F2900FBE15D /* EMVTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMVTags.h; path = ../Library/EMVTags.h; sourceTree = "<group>"; };
+		FF6BA1D31B97060F00FBE15D /* SettingsTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTemplate.swift; sourceTree = "<group>"; };
+		FF6BA1D51B970EDE00FBE15D /* SettingsGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGeneral.swift; sourceTree = "<group>"; };
+		FF6BA1D71B97196000FBE15D /* SettingsTCPIP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTCPIP.swift; sourceTree = "<group>"; };
+		FF6BA1D91B9728FB00FBE15D /* SettingsBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBT.swift; sourceTree = "<group>"; };
+		FF6BA1DC1B989B1E00FBE15D /* PrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintViewController.swift; sourceTree = "<group>"; };
+		FFBAD9621BCFCB4200FF841A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../Shared/Utils.swift; sourceTree = "<group>"; };
+		FFBAD9631BCFCB4200FF841A /* BerTlv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BerTlv.swift; path = ../../Shared/BerTlv.swift; sourceTree = "<group>"; };
+		FFBAD9641BCFCB4200FF841A /* EMVTags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EMVTags.swift; path = ../../Shared/EMVTags.swift; sourceTree = "<group>"; };
+		FFBAD9651BCFCB4200FF841A /* SwiftDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDate.swift; path = ../../Shared/SwiftDate.swift; sourceTree = "<group>"; };
+		FFBAD9661BCFCB4200FF841A /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Progress.swift; path = ../../Shared/Progress.swift; sourceTree = "<group>"; };
+		FFF6131F1BA31C7E002A81F7 /* SettingsBarcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBarcode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF6BA19B1B94783900FBE15D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF603AE41BA1923C00550DEF /* libdtdev.a in Frameworks */,
+				FF6BA1CF1B94862200FBE15D /* ExternalAccessory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF6BA1951B94783900FBE15D = {
+			isa = PBXGroup;
+			children = (
+				FF2B87221DFFF28A0090C60D /* Config */,
+				FF6BA1DB1B972D4900FBE15D /* Library */,
+				FF6BA1A01B94783900FBE15D /* SwiftDemo */,
+				FF6BA19F1B94783900FBE15D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF6BA19F1B94783900FBE15D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF6BA19E1B94783900FBE15D /* SwiftDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF6BA1A01B94783900FBE15D /* SwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FF2B871E1DFFF1C70090C60D /* EMVHelper.swift */,
+				FF2B871F1DFFF1C70090C60D /* XML.swift */,
+				FFBAD9621BCFCB4200FF841A /* Utils.swift */,
+				FFBAD9631BCFCB4200FF841A /* BerTlv.swift */,
+				FFBAD9641BCFCB4200FF841A /* EMVTags.swift */,
+				FFBAD9651BCFCB4200FF841A /* SwiftDate.swift */,
+				FFBAD9661BCFCB4200FF841A /* Progress.swift */,
+				FF6BA1A31B94783900FBE15D /* AppDelegate.swift */,
+				FF6BA1A51B94783900FBE15D /* MainViewController.swift */,
+				FF6BA1A71B94783900FBE15D /* SettingsViewController.swift */,
+				FF6BA1A91B94783900FBE15D /* Main.storyboard */,
+				FF6BA1AC1B94783900FBE15D /* Images.xcassets */,
+				FF6BA1AE1B94783900FBE15D /* LaunchScreen.xib */,
+				FF6BA1D31B97060F00FBE15D /* SettingsTemplate.swift */,
+				FF6BA1D51B970EDE00FBE15D /* SettingsGeneral.swift */,
+				FF6BA1D71B97196000FBE15D /* SettingsTCPIP.swift */,
+				FF6BA1D91B9728FB00FBE15D /* SettingsBT.swift */,
+				FF6BA1A11B94783900FBE15D /* Supporting Files */,
+				FF6BA1DC1B989B1E00FBE15D /* PrintViewController.swift */,
+				FF603AE51BA1A4BB00550DEF /* MainTabBarController.swift */,
+				FFF6131F1BA31C7E002A81F7 /* SettingsBarcode.swift */,
+				FF3BFF651BA42C80001B9633 /* SettingsBarcodeMode.swift */,
+				FF26C74C1BB412E400C9F653 /* CryptoViewController.swift */,
+				FF26C74E1BB4178600C9F653 /* CryptoTemplate.swift */,
+				FF26C7501BB41BEB00C9F653 /* CryptoAlgorithm.swift */,
+				FF26C7521BB4315400C9F653 /* CryptoEMSR.swift */,
+				FF11BD291BB94B3500BCD1DC /* Globals.swift */,
+				FF20D1F31DADAB7B000BB69F /* SettingsAlgorithm.swift */,
+				FF2B871C1DFFED9C0090C60D /* EMVViewController.swift */,
+				FF07C5C71E0007C400362C9B /* EMVMSViewController.swift */,
+				FF07C5C91E000ED100362C9B /* RFViewController.swift */,
+			);
+			path = SwiftDemo;
+			sourceTree = "<group>";
+		};
+		FF6BA1A11B94783900FBE15D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF6BA1A21B94783900FBE15D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF6BA1DB1B972D4900FBE15D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FF603AE31BA1923C00550DEF /* libdtdev.a */,
+				FF6BA1CA1B94787000FBE15D /* DTDevices-Bridging-Header.h */,
+				FF6BA1D01B948F2900FBE15D /* DTDevices.h */,
+				FF6BA1D11B948F2900FBE15D /* EMVPrivateTags.h */,
+				FF6BA1D21B948F2900FBE15D /* EMVTags.h */,
+				FF6BA1CE1B94862200FBE15D /* ExternalAccessory.framework */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF6BA19D1B94783900FBE15D /* SwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF6BA1BF1B94783900FBE15D /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
+			buildPhases = (
+				FF6BA19A1B94783900FBE15D /* Sources */,
+				FF6BA19B1B94783900FBE15D /* Frameworks */,
+				FF6BA19C1B94783900FBE15D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftDemo;
+			productName = SwiftDemo;
+			productReference = FF6BA19E1B94783900FBE15D /* SwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF6BA1961B94783900FBE15D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Datecs;
+				TargetAttributes = {
+					FF6BA19D1B94783900FBE15D = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9FUYX83LQA;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FF6BA1991B94783900FBE15D /* Build configuration list for PBXProject "SwiftDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF6BA1951B94783900FBE15D;
+			productRefGroup = FF6BA19F1B94783900FBE15D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF6BA19D1B94783900FBE15D /* SwiftDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF6BA19C1B94783900FBE15D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2B87231DFFF28A0090C60D /* Config in Resources */,
+				FF6BA1AB1B94783900FBE15D /* Main.storyboard in Resources */,
+				FF6BA1B01B94783900FBE15D /* LaunchScreen.xib in Resources */,
+				FF6BA1AD1B94783900FBE15D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF6BA19A1B94783900FBE15D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF6BA1DD1B989B1E00FBE15D /* PrintViewController.swift in Sources */,
+				FFBAD96A1BCFCB4200FF841A /* SwiftDate.swift in Sources */,
+				FF2B87201DFFF1C70090C60D /* EMVHelper.swift in Sources */,
+				FF20D1F41DADAB7B000BB69F /* SettingsAlgorithm.swift in Sources */,
+				FF6BA1A81B94783900FBE15D /* SettingsViewController.swift in Sources */,
+				FFBAD96B1BCFCB4200FF841A /* Progress.swift in Sources */,
+				FF2B871D1DFFED9C0090C60D /* EMVViewController.swift in Sources */,
+				FF6BA1A41B94783900FBE15D /* AppDelegate.swift in Sources */,
+				FF6BA1D61B970EDE00FBE15D /* SettingsGeneral.swift in Sources */,
+				FF07C5C81E0007C400362C9B /* EMVMSViewController.swift in Sources */,
+				FFBAD9681BCFCB4200FF841A /* BerTlv.swift in Sources */,
+				FF2B87211DFFF1C70090C60D /* XML.swift in Sources */,
+				FFF613201BA31C7E002A81F7 /* SettingsBarcode.swift in Sources */,
+				FF6BA1D81B97196000FBE15D /* SettingsTCPIP.swift in Sources */,
+				FF26C74D1BB412E400C9F653 /* CryptoViewController.swift in Sources */,
+				FF11BD2A1BB94B3500BCD1DC /* Globals.swift in Sources */,
+				FF26C7511BB41BEB00C9F653 /* CryptoAlgorithm.swift in Sources */,
+				FFBAD9671BCFCB4200FF841A /* Utils.swift in Sources */,
+				FF603AE61BA1A4BB00550DEF /* MainTabBarController.swift in Sources */,
+				FF07C5CA1E000ED100362C9B /* RFViewController.swift in Sources */,
+				FF26C7531BB4315400C9F653 /* CryptoEMSR.swift in Sources */,
+				FF6BA1DA1B9728FB00FBE15D /* SettingsBT.swift in Sources */,
+				FF3BFF661BA42C80001B9633 /* SettingsBarcodeMode.swift in Sources */,
+				FF6BA1D41B97060F00FBE15D /* SettingsTemplate.swift in Sources */,
+				FF6BA1A61B94783900FBE15D /* MainViewController.swift in Sources */,
+				FFBAD9691BCFCB4200FF841A /* EMVTags.swift in Sources */,
+				FF26C74F1BB4178600C9F653 /* CryptoTemplate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FF6BA1A91B94783900FBE15D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF6BA1AA1B94783900FBE15D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF6BA1AE1B94783900FBE15D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF6BA1AF1B94783900FBE15D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF6BA1BD1B94783900FBE15D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = ../Library;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftDemo/DTDevices-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF6BA1BE1B94783900FBE15D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = ../Library;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftDemo/DTDevices-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF6BA1C01B94783900FBE15D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9FUYX83LQA;
+				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftDemo",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wabtec.rfp.SwiftLibraryDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FF6BA1C11B94783900FBE15D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9FUYX83LQA;
+				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftDemo",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wabtec.rfp.SwiftLibraryDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF6BA1991B94783900FBE15D /* Build configuration list for PBXProject "SwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF6BA1BD1B94783900FBE15D /* Debug */,
+				FF6BA1BE1B94783900FBE15D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF6BA1BF1B94783900FBE15D /* Build configuration list for PBXNativeTarget "SwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF6BA1C01B94783900FBE15D /* Debug */,
+				FF6BA1C11B94783900FBE15D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF6BA1961B94783900FBE15D /* Project object */;
+}

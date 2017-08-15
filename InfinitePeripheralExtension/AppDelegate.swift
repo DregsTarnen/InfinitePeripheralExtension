@@ -3,7 +3,7 @@
 //  InfinitePeripheralExtension
 //
 //  Created by Erik Fritts on 8/15/17.
-//  Copyright © 2017 RailroadFrictionProductsCorporation. All rights reserved.
+//  
 //
 
 import UIKit
@@ -12,9 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var scanner : DTDevices!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        startScanner()
         // Override point for customization after application launch.
         return true
     }

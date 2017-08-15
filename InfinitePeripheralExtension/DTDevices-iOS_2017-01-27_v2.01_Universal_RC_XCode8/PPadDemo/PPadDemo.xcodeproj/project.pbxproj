@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PPadDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PPadDemoAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		F70351DB1643D835005AB52E /* NSDataCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = F70351DA1643D835005AB52E /* NSDataCrypto.m */; };
+		F78A24AB1643F2A70091E9F3 /* back_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F78A24A91643F2A70091E9F3 /* back_iPhone.png */; };
+		F78A24AC1643F2A70091E9F3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F78A24AA1643F2A70091E9F3 /* Default-568h@2x.png */; };
+		F7F01B6915807837000B5C51 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F01B6815807837000B5C51 /* BluetoothViewController.m */; };
+		FF2ABA2D13BDEB740051E654 /* paypass_logo.bmp in Resources */ = {isa = PBXBuildFile; fileRef = FF2ABA2B13BDEB740051E654 /* paypass_logo.bmp */; };
+		FF2ABA2E13BDEB740051E654 /* paypass.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2ABA2C13BDEB740051E654 /* paypass.png */; };
+		FF2E1032132F8F3800ABDAB0 /* chip_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2E102F132F8F3800ABDAB0 /* chip_pin.png */; };
+		FF2E1033132F8F3800ABDAB0 /* debit_direct.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2E1030132F8F3800ABDAB0 /* debit_direct.png */; };
+		FF2E1034132F8F3800ABDAB0 /* debit_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2E1031132F8F3800ABDAB0 /* debit_pin.png */; };
+		FF2F7011183A2D5C00E5E425 /* ppad2.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2F7010183A2D5C00E5E425 /* ppad2.png */; };
+		FF5859FD13DD750600BE4D33 /* button_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5859FC13DD750600BE4D33 /* button_ok.png */; };
+		FF5859FF13DD796300BE4D33 /* button_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5859FE13DD796300BE4D33 /* button_clear.png */; };
+		FF5EDCCE13C1D31200BBE9A6 /* card_pp.png in Resources */ = {isa = PBXBuildFile; fileRef = FF5EDCCD13C1D31200BBE9A6 /* card_pp.png */; };
+		FF8A104113C73DE200469C83 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF8A104013C73DE200469C83 /* Entitlements.plist */; };
+		FF95507713B9FFA800D30234 /* libdtdev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF95507513B9FFA800D30234 /* libdtdev.a */; };
+		FFA9A3D013DD50AB001DBAA5 /* AmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA9A3CF13DD50AB001DBAA5 /* AmountViewController.m */; };
+		FFAFF385132E6ED60029BC58 /* card_ms.png in Resources */ = {isa = PBXBuildFile; fileRef = FFAFF383132E6ED60029BC58 /* card_ms.png */; };
+		FFAFF386132E6ED60029BC58 /* card_smart.png in Resources */ = {isa = PBXBuildFile; fileRef = FFAFF384132E6ED60029BC58 /* card_smart.png */; };
+		FFB449BB13309FD800188C8F /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB449BA13309FD800188C8F /* SignatureViewController.m */; };
+		FFB4E5CB12B6323900CA3CBA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB4E5C812B6323900CA3CBA /* icon.png */; };
+		FFB4E5CC12B6323900CA3CBA /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB4E5C912B6323900CA3CBA /* normal.png */; };
+		FFB4E5CF12B6330400CA3CBA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB4E5CE12B6330400CA3CBA /* MainViewController.m */; };
+		FFB4E60D12B635DD00CA3CBA /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB4E60C12B635DD00CA3CBA /* button.png */; };
+		FFB4E63E12B639FA00CA3CBA /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB4E63D12B639FA00CA3CBA /* ExternalAccessory.framework */; };
+		FFB4E65312B63B6000CA3CBA /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB4E65212B63B6000CA3CBA /* ProgressViewController.m */; };
+		FFB4E68A12B6452000CA3CBA /* credit.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB4E68712B6452000CA3CBA /* credit.png */; };
+		FFC22735132E6781000DA6F1 /* connected.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC22733132E6781000DA6F1 /* connected.png */; };
+		FFC22736132E6781000DA6F1 /* disconnected.png in Resources */ = {isa = PBXBuildFile; fileRef = FFC22734132E6781000DA6F1 /* disconnected.png */; };
+		FFDAEB7713DDA9DE0085F214 /* ppad_1_0_mc_sc_Black.png in Resources */ = {isa = PBXBuildFile; fileRef = FFDAEB7513DDA9DE0085F214 /* ppad_1_0_mc_sc_Black.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PPadDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPadDemoAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PPadDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPadDemoAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* PPadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PPadDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPadDemo_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* PPadDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PPadDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F70351D91643D835005AB52E /* NSDataCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataCrypto.h; sourceTree = "<group>"; };
+		F70351DA1643D835005AB52E /* NSDataCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataCrypto.m; sourceTree = "<group>"; };
+		F78A24A91643F2A70091E9F3 /* back_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_iPhone.png; sourceTree = "<group>"; };
+		F78A24AA1643F2A70091E9F3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F7B03B0E1643AEE30093A106 /* DTDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDevices.h; path = ../Library/DTDevices.h; sourceTree = "<group>"; };
+		F7F01B6715807837000B5C51 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
+		F7F01B6815807837000B5C51 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
+		FF2ABA2B13BDEB740051E654 /* paypass_logo.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = paypass_logo.bmp; sourceTree = "<group>"; };
+		FF2ABA2C13BDEB740051E654 /* paypass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paypass.png; sourceTree = "<group>"; };
+		FF2E102F132F8F3800ABDAB0 /* chip_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chip_pin.png; sourceTree = "<group>"; };
+		FF2E1030132F8F3800ABDAB0 /* debit_direct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = debit_direct.png; sourceTree = "<group>"; };
+		FF2E1031132F8F3800ABDAB0 /* debit_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = debit_pin.png; sourceTree = "<group>"; };
+		FF2F7010183A2D5C00E5E425 /* ppad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ppad2.png; sourceTree = "<group>"; };
+		FF5859FC13DD750600BE4D33 /* button_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_ok.png; sourceTree = "<group>"; };
+		FF5859FE13DD796300BE4D33 /* button_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_clear.png; sourceTree = "<group>"; };
+		FF5EDCCD13C1D31200BBE9A6 /* card_pp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_pp.png; sourceTree = "<group>"; };
+		FF8A104013C73DE200469C83 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		FF95507513B9FFA800D30234 /* libdtdev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdtdev.a; path = ../Library/libdtdev.a; sourceTree = "<group>"; };
+		FFA9A3CE13DD50AB001DBAA5 /* AmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmountViewController.h; sourceTree = "<group>"; };
+		FFA9A3CF13DD50AB001DBAA5 /* AmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmountViewController.m; sourceTree = "<group>"; };
+		FFAFF383132E6ED60029BC58 /* card_ms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_ms.png; sourceTree = "<group>"; };
+		FFAFF384132E6ED60029BC58 /* card_smart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_smart.png; sourceTree = "<group>"; };
+		FFB449B913309FD800188C8F /* SignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
+		FFB449BA13309FD800188C8F /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
+		FFB4E5C812B6323900CA3CBA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		FFB4E5C912B6323900CA3CBA /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
+		FFB4E5CD12B6330400CA3CBA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FFB4E5CE12B6330400CA3CBA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FFB4E60C12B635DD00CA3CBA /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		FFB4E63D12B639FA00CA3CBA /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		FFB4E65112B63B6000CA3CBA /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		FFB4E65212B63B6000CA3CBA /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		FFB4E68712B6452000CA3CBA /* credit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit.png; sourceTree = "<group>"; };
+		FFC22733132E6781000DA6F1 /* connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connected.png; sourceTree = "<group>"; };
+		FFC22734132E6781000DA6F1 /* disconnected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disconnected.png; sourceTree = "<group>"; };
+		FFDAEB7513DDA9DE0085F214 /* ppad_1_0_mc_sc_Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ppad_1_0_mc_sc_Black.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				FFB4E63E12B639FA00CA3CBA /* ExternalAccessory.framework in Frameworks */,
+				FF95507713B9FFA800D30234 /* libdtdev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F70351D91643D835005AB52E /* NSDataCrypto.h */,
+				F70351DA1643D835005AB52E /* NSDataCrypto.m */,
+				F7F01B6715807837000B5C51 /* BluetoothViewController.h */,
+				F7F01B6815807837000B5C51 /* BluetoothViewController.m */,
+				FFB4E65112B63B6000CA3CBA /* ProgressViewController.h */,
+				FFB4E65212B63B6000CA3CBA /* ProgressViewController.m */,
+				FFB4E5CD12B6330400CA3CBA /* MainViewController.h */,
+				FFB4E5CE12B6330400CA3CBA /* MainViewController.m */,
+				1D3623240D0F684500981E51 /* PPadDemoAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PPadDemoAppDelegate.m */,
+				FFB449B913309FD800188C8F /* SignatureViewController.h */,
+				FFB449BA13309FD800188C8F /* SignatureViewController.m */,
+				FFA9A3CE13DD50AB001DBAA5 /* AmountViewController.h */,
+				FFA9A3CF13DD50AB001DBAA5 /* AmountViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* PPadDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				FFB4E5C212B62FEA00CA3CBA /* SDK */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PPadDemo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F7010183A2D5C00E5E425 /* ppad2.png */,
+				F78A24A91643F2A70091E9F3 /* back_iPhone.png */,
+				F78A24AA1643F2A70091E9F3 /* Default-568h@2x.png */,
+				FFDAEB7513DDA9DE0085F214 /* ppad_1_0_mc_sc_Black.png */,
+				FF5859FE13DD796300BE4D33 /* button_clear.png */,
+				FF5859FC13DD750600BE4D33 /* button_ok.png */,
+				FF8A104013C73DE200469C83 /* Entitlements.plist */,
+				FF5EDCCD13C1D31200BBE9A6 /* card_pp.png */,
+				FF2ABA2B13BDEB740051E654 /* paypass_logo.bmp */,
+				FF2ABA2C13BDEB740051E654 /* paypass.png */,
+				FF2E102F132F8F3800ABDAB0 /* chip_pin.png */,
+				FF2E1030132F8F3800ABDAB0 /* debit_direct.png */,
+				FF2E1031132F8F3800ABDAB0 /* debit_pin.png */,
+				FFAFF383132E6ED60029BC58 /* card_ms.png */,
+				FFAFF384132E6ED60029BC58 /* card_smart.png */,
+				FFC22733132E6781000DA6F1 /* connected.png */,
+				FFC22734132E6781000DA6F1 /* disconnected.png */,
+				FFB4E68712B6452000CA3CBA /* credit.png */,
+				FFB4E60C12B635DD00CA3CBA /* button.png */,
+				FFB4E5C812B6323900CA3CBA /* icon.png */,
+				FFB4E5C912B6323900CA3CBA /* normal.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* PPadDemo-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				FFB4E63D12B639FA00CA3CBA /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFB4E5C212B62FEA00CA3CBA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				F7B03B0E1643AEE30093A106 /* DTDevices.h */,
+				FF95507513B9FFA800D30234 /* libdtdev.a */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* PPadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PPadDemo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPadDemo;
+			productName = PPadDemo;
+			productReference = 1D6058910D05DD3D006BFB54 /* PPadDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = SB2F4HT97P;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PPadDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* PPadDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				FFB4E5CB12B6323900CA3CBA /* icon.png in Resources */,
+				FFB4E5CC12B6323900CA3CBA /* normal.png in Resources */,
+				FFB4E60D12B635DD00CA3CBA /* button.png in Resources */,
+				FFB4E68A12B6452000CA3CBA /* credit.png in Resources */,
+				FFC22735132E6781000DA6F1 /* connected.png in Resources */,
+				FFC22736132E6781000DA6F1 /* disconnected.png in Resources */,
+				FFAFF385132E6ED60029BC58 /* card_ms.png in Resources */,
+				FFAFF386132E6ED60029BC58 /* card_smart.png in Resources */,
+				FF2E1032132F8F3800ABDAB0 /* chip_pin.png in Resources */,
+				FF2E1033132F8F3800ABDAB0 /* debit_direct.png in Resources */,
+				FF2E1034132F8F3800ABDAB0 /* debit_pin.png in Resources */,
+				FF2ABA2D13BDEB740051E654 /* paypass_logo.bmp in Resources */,
+				FF2ABA2E13BDEB740051E654 /* paypass.png in Resources */,
+				FF5EDCCE13C1D31200BBE9A6 /* card_pp.png in Resources */,
+				FF8A104113C73DE200469C83 /* Entitlements.plist in Resources */,
+				FF5859FD13DD750600BE4D33 /* button_ok.png in Resources */,
+				FF5859FF13DD796300BE4D33 /* button_clear.png in Resources */,
+				FFDAEB7713DDA9DE0085F214 /* ppad_1_0_mc_sc_Black.png in Resources */,
+				F78A24AB1643F2A70091E9F3 /* back_iPhone.png in Resources */,
+				F78A24AC1643F2A70091E9F3 /* Default-568h@2x.png in Resources */,
+				FF2F7011183A2D5C00E5E425 /* ppad2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PPadDemoAppDelegate.m in Sources */,
+				FFB4E5CF12B6330400CA3CBA /* MainViewController.m in Sources */,
+				FFB4E65312B63B6000CA3CBA /* ProgressViewController.m in Sources */,
+				FFB449BB13309FD800188C8F /* SignatureViewController.m in Sources */,
+				FFA9A3D013DD50AB001DBAA5 /* AmountViewController.m in Sources */,
+				F7F01B6915807837000B5C51 /* BluetoothViewController.m in Sources */,
+				F70351DB1643D835005AB52E /* NSDataCrypto.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PPadDemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "PPadDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Library\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = PPadDemo;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PPadDemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "PPadDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Library\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = PPadDemo;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FF8A105813C741DC00469C83 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = AdHoc;
+		};
+		FF8A105913C741DC00469C83 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PPadDemo_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "PPadDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Library\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = PPadDemo;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PPadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				FF8A105913C741DC00469C83 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PPadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				FF8A105813C741DC00469C83 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
